@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        table,tr,td,th {
+          border: 2px black solid;
+          border-collapse: collapse;
+          text-align: center;
+        }
+
+        td{
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Registration form</h3>
+
+    <!--place holder hint to the user
+    vaolue=> default value
+    readonly=> write protect or make the field read only-->
+
+    <form method="post" enctype="multipart/form-data" autocomplete="off">
+        <table>
+            <tr>
+                <th>enter your first name</th>
+                <td><input type="text" name="first name" id="first name" placeholder="first name hear" value="sachin"></td>
+            </tr>
+            <tr>
+                <th>enter the last name</th>
+                <td><input type="text" name="last name" id="last name" placeholder="last name hear" value="kumar"></td>
+            </tr>
+            <tr>
+                <th>enter your passowrd</th>
+                <td><input type="password" name="pass" id="pass" required></td>
+            </tr>
+            <tr>
+                <th>re-enter your password</th>
+                <td><input type="password" name="confirmpassword" id="confirmpassword" required></td>
+            </tr>
+            <tr>
+                <th>enter your email</th>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+
+            <tr>
+                <th>enter your mobile</th>
+                <td><input type="number" name="mobile" id="mobile" required></td>
+            </tr>
+            <tr>
+                <th>enter your adress</th>
+                <td><textarea name="adress" id="adress" cols="22" rows="7" required></textarea>
+                </td>
+            </tr>
+            <tr>
+               <th> select your gender</th>
+            <td>
+                <label for="">male<input type="radio" name="gender" id="gender" value="male" required></label>
+
+                <label for="">female<input type="radio" name="gender" id="gender" value="female" required></label>
+                
+                
+            </td>
+        </tr>
+        <tr>
+            <th>select your hobbies</th>
+            <td>
+                <label for="hobbies1">
+                    playing chess
+                    <input type="checkbox" name="hobbies1" id="hobbies1" value="playing chess" required>
+                </label>
+                <label for="hobbies2">
+                    playing cricket
+                    <input type="checkbox" name="hobbies2" id="hobbies2" value="playing cricket" checked required>
+                </label>
+                <label for="hobbies3">
+                    drwaing
+                    <input type="checkbox" name="hobbies3" id="hobbies3" value="drawing" required>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th>select your date of birth</th>
+            <td><input type="date" name="dob" id="dob"></td>
+        </tr>
+        <tr>
+            <th>select your country</th>
+            <td>
+                <select name="country" id="country" multiple>
+                    <option value="null">choose your country</option>
+                    <option value="indian">india</option>
+                    <option value="nepal">nepal</option>
+                    <option value="japan">japan</option>
+                    <option value="isrel">isrel</option>
+                    <option value="other"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="save my data">
+                <input type="reset" name="" id="" value="reset data">
+            </td>
+        </tr>
+
+
+
+        
+
+
+        </table>
+    </form>
+    
+</body>
+</html>

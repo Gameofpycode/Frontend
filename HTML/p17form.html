@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+</head>
+<body>
+    <!-- 
+        action=> server file/path()
+        method=> POST -> hide the data
+                 GET ->display the data in URL bar
+        autocomplete=>clear the history->off/on (default)
+        enctype=>encrypt type-> file uploading(multipart/form-data)
+        required=>mandotory fill the input field(to recognize the empty field)         
+    -->
+
+    <form action="http://localhost/server.php" method="get" autocomplete="off">
+        <fieldset>
+            <legend>Login Form</legend>
+
+            <label for="user">Username</label>
+            <input type="text" name="user" id="user" value="admin@gmail.com" readonly required>
+
+            <br><br>
+
+            <input type="submit" value="SignIn">
+            <input type="reset" value="Clear">
+        </fieldset>
+    </form>
+    <!--
+        lable=> lable for inpute tag
+        type=> the type of input
+        name=> 
+
+    -->
+    
+</body>
+</html>

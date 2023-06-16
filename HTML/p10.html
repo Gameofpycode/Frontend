@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables</title>
+    <style>
+        table,tr,td,th {
+            border: 1px black solid;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        td,th{
+            padding:10px
+        }
+        th{
+            background-color: #999;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h3>Tables</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Marks</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>sonoo</td>
+                <td>jaiswal</td>
+                <td>60</td>
+
+            </tr>
+            <tr>
+                <td>james</td>
+                <td>willum</td>
+                <td>80</td>
+
+            </tr>
+            <tr>
+                <td>swathi</td>
+                <td>sironi</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    Total mark
+                </td>
+                <td>225</td>
+            </tr>
+
+        </tfoot>
+    </table>
+</body>
+</html>

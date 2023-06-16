@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        progress{
+            height: 2.5em;
+            width:500px
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h3>Dynamic prograss bar</h3>
+
+    <h5 id="result"></h5>
+    <progress min="0" max="100" value="10"></progress>
+
+    <script>
+        var pro = document.querySelector('progress');
+        var x=0;
+
+        function add(){
+            x+=10;
+            if(x<=100){
+                pro.value=x;
+            }else{
+                alret("file dowloading completed");
+                return;
+            }
+        }
+        setInterval(add,1000);
+    </script>
+    
+</body>
+</html>

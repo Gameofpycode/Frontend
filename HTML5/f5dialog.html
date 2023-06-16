@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dailog</title>
+    <style>
+        .sub{
+            width: 500px;
+            padding:40px;
+            text-align: center;
+            background-color: rgb(140, 138, 155);
+            box-shadow: 3px 4px 16px rgb(92, 91, 91);
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Dailog</h3>
+
+    <button id="show">Show dailog</button>
+    
+    <dialog class="sub" id="MyDailog">
+        <button id="close">hide</button>
+
+        <h3>    my dailog</h3>
+
+        <form action="">
+            <label for="">Subscribe hear</label>
+            <input type="email"  name="subscribe" id="subscribe" placeholder="enter your email_id to subscribe">
+
+            <br><br>
+            <input type="submit" value="creat">
+        </form>
+
+
+    </dialog>
+
+     <script>
+        var myDailog=document.getElementById("MyDailog");
+
+        document.getElementById("show").onclick=function(){
+            myDailog.show();
+
+        }
+        document.getElementById("close").onclick=function(){
+            myDailog.close();
+            
+        }
+    </script>
+
+    
+</body>
+</html>
