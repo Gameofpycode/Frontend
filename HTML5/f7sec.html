@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        header{
+            padding:20px;
+            background:rgb(24, 35, 185);
+            
+        }
+        .menu a {
+            text-decoration: none;
+            background: slateblue;
+            color:#fff;
+            padding: 14px 16px;
+            
+        }
+        .menu a:hover{
+            background: orangered;
+        }
+        .menu .right{
+            position: absolute;
+            right:10px;
+            top:6px !important;
+        
+        }
+        .menu .right a{
+            float:left;
+            margin-left: 5px;
+        }
+
+        section{
+            display: flex;
+            height: 100vh;
+        }
+
+        aside{
+            background: gold;
+            color: #fff;
+            width: 10vh;
+            padding:20px;
+        
+        }
+
+        .center{
+            padding: 20px;
+            height: 100vh;
+        }
+        .center p{
+            text-align:justify ;
+            word-break: break-all;
+            line-height: 25px;
+        }
+
+        footer{
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            color:#fff;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="#" class="logo">portfolio</a>
+            <div class="right">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">MyWork</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <aside>
+            <p>left sidebar</p>
+        </aside>
+
+        <div class="center">
+        <h3>welcome to html</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora nemo natus debitis atque blanditiis optio doloribus.  Molestias delectus ab corrupti ut dicta repudiandae magnam distinctio dolores, laudantium libero ipsum?</p>
+        </div>
+
+        <aside>
+            <p>right side bar</p>
+        </aside>
+
+    </section>
+    <footer>
+        <p>this is footer</p>
+    </footer>
+</body>
+</html>
