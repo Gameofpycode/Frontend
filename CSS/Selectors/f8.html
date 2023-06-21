@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div a[target]{
+            background-color: slateblue;
+            color: rgb(238, 240, 241);
+            text-decoration: none;
+            padding:12px 14px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Atribute Selectore</h1>
+
+    <!--
+        [attr]  [attr=value] [attr~=value]  [attr|=value]  [attr^=value]  [attr$=value] [attr*=value]
+    -->
+    <h1>element [attr]</h1>
+
+    <div>
+        <a href="f3.html" target="_self">Home</a>
+        <a href="#">sample link</a>
+        <a href="f3.html" target="_parant">Home</a>
+        <a href="f1.html" target="_top">About</a>
+        <a href="https://gmail.com" target="_blank">login</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 200px;
+
+        }
+        table,tr,th,td,colgroup,col{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+       /* col.selected || td{
+            background-color:green;
+        }*/
+
+        /*
+        colum_selector || td {
+            style property
+        }
+        */
+    </style>
+
+    
+</head>
+<body>
+    <h1>column combinator || (not compatible to any browers)</h1>
+    <table>
+        <colgroup>
+            <col span="2">
+            <col class="selected">
+        </colgroup>
+
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>b</td>
+                <td>C</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">d</td>
+                <td>E</td>
+            </tr>
+
+            <tr>
+                <td>f</td>
+                <td colspan="2">g</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
