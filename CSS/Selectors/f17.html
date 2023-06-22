@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk{
+            background-color: black;
+        }
+        .blk p::first-letter{
+            font-size: 40px;
+            font-weight: bold;
+            color: yellow;
+        }
+        .blk p::first-line{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>selector pseudo element</h1>
+    <h3>tag::first letter and tag:: first line</h3>
+
+    <div class="blk">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, veritatis laudantium a eveniet sed officiis ab ducimus impedit consequatur accusamus reprehenderit harum facilis possimus sunt dolor commodi voluptatem tempora nihil!</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum pariatur nam optio vel animi ipsam, saepe, eos iure excepturi ab adipisci error aperiam. Libero nisi facilis quaerat dicta est obcaecati inventore dolor beatae at. Saepe, suscipit sunt. Molestias nobis perferendis, pariatur quis nesciunt ea praesentium tenetur dolores veritatis libero culpa.</p>
+</body>
+</html>
