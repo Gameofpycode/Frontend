@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{direction: rtl;}
+
+        .p2{
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .p3{white-space: pre-wrap;}
+        
+
+    </style>
+</head>
+<body>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quam nisi alias consequuntur veritatis temporibus laboriosam explicabo suscipit, iusto soluta quaerat quasi dignissimos debitis. Nemo iure corporis atque neque facere.</p>
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt minus molestiae quae nam aspernatur est ea obcaecati, magni eligendi eveniet, placeat vitae quibusdam aut consequuntur rem voluptates architecto facere quod.</p>
+
+    <pre>
+        function product(a,b){
+            return a*b;
+        }
+        product(123,33);
+
+    </pre>
+    <p class="p3">
+        function product(a,b){
+             return a*b;
+        }
+        product(123,33);
+    </p>
+</body>
+</html>
