@@ -5,13 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <STYle>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            overflow-x:hidden ;
+            margin:0;
+            padding: 0;
+        }
+        .menu{
+            position:fixed;
+            top:50%;
+            right:0;
+            transform:translateY(-50%)
+
+        }
+        .menu li{
+            list-style: none;
+            padding:10px 12px;
+            border: 1px solid black;
+            margin:2px;
+            transition:all 0.4s ease;
+            cursor:pointer;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .menu li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu li:hover{
+            background-color: slateblue;
+        }
+        .menu li:hover a{
+            color:#fff;
+            font-weight: bold;
+
+        }
+
+        .container{
+            width:100%;
+            height:100%;
+
+        }
+        div{
+            width:100%;
+            height:100vh;
+            color:rgb(111, 233, 241);
+            padding: 20px;
+        }
+
+        #home{background-color: orangered;}
+        #about{background-color: rgb(52, 180, 21);}
+        #products{background-color: rgb(82, 23, 219);}
+        #contacts{background-color: rgb(233, 35, 200);}
+        
+    </STYle>
 </head>
 <body>
     <ul class="menu">
-        <li><a href="home">home</a></li>
-        <li><a href="about">about</a></li>
-        <li><a href="products"></a></li>
-        <li><a href="contacts">contacts</a></li>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#products">products</a></li>
+        <li><a href="#contacts">contacts</a></li>
 
     </ul>
     <section class="container">
@@ -22,10 +79,10 @@
         <div id="about">
             <h1>about section</h1>
         </div>
-        <div di="products">
+        <div id="products">
             <h1>products</h1>
         </div>
-        <div id="contatcs">
+        <div id="contacts">
             <h1>products</h1>
         </div>
     </section>
