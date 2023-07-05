@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            padding-left: 20px;
+            counter-reset: ch;
+        }
+        h1::before{
+            counter-increment: ch;
+            content: counter(ch) ".";
+        }
+        h1{
+            counter-reset: topic;
+        }
+        h3{
+            margin-left: 35px;
+            counter-reset: subT;
+        }
+        h3::before{
+            counter-increment: topic;
+            content: counter(ch) "." counter(topic) " ";
+        }
+        h5{
+            margin-left: 70px;
+        }
+        h5::before{
+            counter-increment: subT;
+            content: counter(ch) "." counter(topic) "." counter(subT) " ";
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>HTML</h1>
+        <h3>header tags</h3>
+            <h5>h1-h6</h5>
+        <h3>formate tags</h3>
+            <h5>paragraph tah</h5>
+            <h5>adress tag</h5>
+            <h5>strong and bold</h5>
+        <h3>link and button tag</h3>
+        <h3>table nad list tag</h3> 
+
+    <h1>CSS</h1> 
+        <H3>selector</H3>
+        <h3>background</h3> 
+        <h3>color and font</h3>
+            <h5>background-color</h5>
+            <h5>font-color</h5>
+            <h5>border-color</h5> 
+            <h5>font-family</h5>
+        <h3>overflow and opacity</h3>
+        <h3>text and float</h3>
+
+    <h1>JAVA SCRIPT</h1>
+        <h3>intruduction</h3>
+        <h3>oparators</h3>
+        <h3>conditional and loops</h3>
+            <h5>literal</h5>
+            <h5>objects</h5>
+            <h5>JSON</h5>
+        <h3>function</h3>   
+    
+    <h1>React js</h1>
+        <h3>react components</h3>
+            <h5>functional components</h5>
+            <h5>class componantes</h5>
+            <h5>const functional componantes</h5>
+        <h3>reach hook</h3>
+        <h3>react life cycle</h3>
+            <h5>mountainig</h5>
+            <h5>updateing</h5>
+            <h5>UnMon</h5>
+
+</body>
+</html>
