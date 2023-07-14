@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+            animation: anim1 10s; /*shoert hand property*/
+        }
+
+        /* keyframes are the blck of the animation */
+        /* @keyframe name{
+            code
+        }
+
+        iduvidual animations properties
+
+        animation name=> name of the key frame
+        animation-duration=>time duration to completb one cycle of thr animation
+        anmation -timing function=>built in names
+        animation delay=>time dealy to statrt next cyccle of animation
+        animatiosn iteration-count=>number of cycles
+        animatiionn direction=>clk wise of anti clk wise
+        animation-fill- mode=>built in names*/
+
+
+        @keyframes  anim1{
+
+            from{
+                /* starting css */
+                background-color: orangered;
+                top: 0;
+                left: 0;
+            }
+            to{
+                /* ending css */
+                background-color: gold;
+                top: 80%;
+                left: 0px;
+            }
+        }
+        </style>
+
+</head>
+<body>
+    <h3>keyframe</h3>
+    <div class="b1"></div>
+</body>
+</html>

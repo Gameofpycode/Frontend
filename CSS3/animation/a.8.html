@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            animation-name: circle;
+            animation-duration:2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forword;
+        }
+        .ciecle1{
+            animation-direction: reverse;
+        }
+ 
+        @keyframes circle{
+            0%{ 
+                transform:rotate(0deg)
+            }
+            100%{
+                transform: rotate(360deg);                                      
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>normal direction</h1>
+    <div class="circle"></div>
+
+    <h1>reverse direction</h1>
+    <div class="circle1"></div>
+
+    <h2>alternate direction</h2>
+    <div class="circle2"></div>
+
+    <h2>alternate revers direction</h2>
+    <div class="circle3"></div>
+</body>
+</html>

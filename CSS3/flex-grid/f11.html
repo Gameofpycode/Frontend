@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-areas: "topH topH ads" "sideNav mainbody ads" "btmFoot btmFoot btmFoot";
+            grid-gap: 10px;
+            grid-template-rows: 80px 1fr 80px;
+            grid-template-columns: 15% 1fr 10%;
+            height: 100vh;
+        }
+
+        header,footer,nav,aside,article{
+            background-color: yellow;
+        }
+        #topH{grid-area: topH;}
+        #mainbody{grid-area: mainbody;}
+        #sideNav{grid-area: ads;}
+        #bottomFoot{grid-area: btmFoot;}
+    </style>
+</head>
+<body>
+    <header id="topH">
+        <h1>title to header</h1>
+    </header>
+    <article id="mainbody">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita non corporis sequi magnam quam hic fugiat tempora doloribus. Quasi libero consectetur excepturi laborum! Quos corrupti dolor blanditiis voluptates fugit atque?</p>
+    </article>
+    <nav id="sideNav">
+        <p>side nav</p>
+    </nav>
+    <aside id="ads">
+        <p>side ads</p>
+    </aside>
+    <footer id="bottomFoot">
+        <p>All right reserved</p>
+    </footer>
+</body>
+</html>

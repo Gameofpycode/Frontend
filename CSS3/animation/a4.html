@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+
+            animation-name: anim1;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            animation-delay: 2s;
+            animation-direction:normal;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+
+        @keyframes anim1{
+            0%{
+                transform: translate(0px,0px);
+                background-color: crimson;
+            }
+            25%{
+                transform: translate(500px,0px);
+                background-color: rgb(20, 180, 220);
+            }
+            50%{
+                transform: translate(500px,500px);
+                background-color: rgb(220, 20, 177);
+            }
+            75%{
+                transform: translate(0px,500px);
+                background-color: rgb(20, 220, 30);
+            }
+            100%{
+                transform: translate(0px 0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>keyframe</h1>
+    <button id="play">Play</button>
+    <button id="pause"></button>
+
+    <div class="b1" id="squre"></div>
+
+    <script>
+        document.getElementById('play').onclick=function(){
+            document.getElementById("squre").style.animationPlayState="running";
+        };
+        document.getElementById('pause').onclick=function(){
+            document.getElementById("squre").style.animationPlayState="paused";
+        };
+    </script>
+</body>
+</html>

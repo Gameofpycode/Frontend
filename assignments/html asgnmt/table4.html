@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border:2px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        
+        }
+        table .bold{
+            font-weight: bold;
+        }
+
+        table #center{
+            text-align: center;
+        }
+        table #total{
+            text-align: right;
+        }
+        table #left{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>********Reqired table image*********</h2>
+    <br>
+    <img src="./table4.JPG" alt="" width="400" height="300">
+    <br><hr>
+    <h2><u>output:</u></h2>
+    <table>
+        <tr>
+            <td rowspan="11" class="bold">TCB</td>
+            <td class="bold" id="left">order no:</td>
+            <td colspan="3">#ABC001</td>
+        </tr>
+        <tr>
+            <td class="bold" id="left">order date:</td>
+            <td colspan="3">23-march-2016</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bold" id="center">customer</td>
+        </tr>
+        <tr>
+            <td class="bold" id="left">name:</td>
+            <td colspan="3">john papas</td>
+        </tr>
+        <tr>
+            <td class="bold" id="left">Adress:</td>
+            <td colspan="3">independence day 5th str,11511</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bold" id="center">order details</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>of mice of men</td>
+            <td>book</td>
+            <td>10.00$</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>less miserbel</td>
+            <td>book</td>
+            <td>12.00$</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>game of throne-S01</td>
+            <td>DVD</td>
+            <td>50.00$</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>samsung Galaxy</td>
+            <td>mobile phone</td>
+            <td>200.00$</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="bold" id="total">total:</td>
+            <td>272.00$</td>
+        </tr>
+    </table>
+</body>
+</html>

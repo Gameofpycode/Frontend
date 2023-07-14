@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table,th,tr,td{
+            /* border: 1px solid black;
+            border-collapse: collapse; */
+            text-align:left;
+            padding:5px;
+            
+        } 
+        div{
+            width: 1000px;
+            height: 100%;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        input{
+            padding:3px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table>
+        <tr>
+            <td>Your Name</td>
+            <td>xyz</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Title</td>
+            <td>first Name</td>
+            <td>middle name</td>
+            <td>Last Name</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td colspan="4">
+                <input type="radio" >Mlae
+                <input type="radio">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Birth date</td>
+            <td colspan="4"><input type="text" size="60"></td>
+        </tr>
+        <tr>
+            <td>Adress</td>
+            <td colspan="2"><input type="text" size="45"></td> 
+            <td colspan="2"><input type="text" size="45"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">streat Address</td>
+            <td colspan="2">strat address line 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Suburd</td>
+            <td>State</td>
+            <td>Post code</td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td>Home Phone</td>
+            <td>Mobile Phone</td>
+            <td>Email Adress</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td>Are you an Australian?</td>
+            <td colspan="4"><input type="radio">Yes <input type="radio">No</td>
+        </tr>
+        <tr>
+            <td colspan="5">Do you have working visa?
+                <input type="radio">Yes
+                <input type="radio">No
+            </td>
+        </tr>
+        
+        <tr>
+            <th colspan="5">Employment Detailes</th>
+        </tr>
+        <tr>
+            <td>job Title</td>
+            <td colspan="4"><input type="text" size="60"></td>
+        </tr>
+        <tr>
+            <td>Commencement Date</td>
+            <td colspan="4"><input type="text" size="60"></td>
+        </tr>
+        <tr>
+            <td>File tax Number</td>
+            <td colspan="4"><input type="text" size="60"></td>
+        </tr>
+        <tr>
+            <td>Employment Status</td>
+            <td colspan="4">
+                <input type="radio">Full time
+                <input type="radio">Part Time
+                <input type="radio">Temporary
+                <input type="radio">Casual
+            </td>
+        </tr>
+        <tr>
+            <th colspan="5">Emergency Contact Details</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>xyz</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Title</td>
+            <td>First Name</td>
+            <td>Middle Name</td>
+            <td>Surename</td>
+        </tr>
+        <tr>
+            <td>Relationship</td>
+            <td colspan="4"><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">Contact</td>
+            <td>Home Phone</td>
+            <td>Mobile Phone</td>
+            <td>Email Adress</td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <th colspan="5">Banking details</th>
+        </tr>
+        <tr>
+            <td>Bank</td>
+            <td>Bank name</td>
+            <td>Bank Branch</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"><input type="text" size="45"></td>
+            <td colspan="2"><input type="text" size="45"></td>
+        </tr>
+        <tr>
+            <td>Account</td>
+            <td>Account name</td>
+            <td>Account number</td>
+            <td>BSB number</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Empploye Signeture</td>
+            <td colspan="4"><textarea name="signeture" id="" cols="50" rows="4"></textarea></td>       
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="4"><input type="text" placeholder="Print your name hear"></td>    
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="4"><input type="text" placeholder="Enter Date hear"></td>
+        </tr>
+        <tr>
+            <th><button name="submit" id="submit">Submit</button></th>
+        </tr>   
+    </table>
+</div>
+</html>

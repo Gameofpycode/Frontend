@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            animation-name: stretch;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .right-top{
+            top: 20px;
+            right: 20px;
+            background-color: red;
+        }
+
+        .right-bootom{
+            bottom: 20px;
+            right: 20px;
+            background-color: deeppink;
+        }
+        .left-top{
+            top: 20px;
+            right: 20px;
+            background-color: rgb(255, 115, 0);
+        }
+
+        .left-bootom{
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(20, 36, 255);
+        }
+
+        @keyframes stretch{
+            0%{
+                transform: scale(0.3);
+                background-color: green;
+                border-radius: 100%;
+            }
+
+            50%{
+                background-color: red;
+
+            }
+            100%{
+                transition: scale(1,2);
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="right-top"></div>
+        <div class="left-top"></div>\
+        <div class="right-bottom"></div>
+        <div class="left-bottom"></div>
+    </main>
+</body>
+</html>

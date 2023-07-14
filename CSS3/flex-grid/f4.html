@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0px;
+            margin: 0px;
+            overflow-x:hidden;
+        }
+
+        header{
+            width:100%;
+            height: 100vh;
+            background-color: red;
+            padding:10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h3{
+            color: white;
+            font-size: x-large;
+            text-transform: uppercase;
+
+        }
+
+        header .menu a{
+            text-decoration: none;
+            background-color: yellow;
+            padding: 13px 15px;
+        }
+         
+        header .menu a:hover{
+            background-color: black;
+            color: white;
+        }
+
+        header button{
+            display: none;
+        }
+
+        footer{
+            background-color: #444;
+            color: white;
+            text-align:center;
+            padding: 12px;
+            
+        }
+
+        .main{
+            display: flex;
+            height: 100vh;
+
+        }
+
+        .main aside{
+            background: cornflowerblue;
+            padding: 20px;
+            width: 100px;
+        }
+
+        .main div{padding: 20px;
+
+        }
+
+        @media screen and (max-width: 780px){
+            header{
+                display: block;
+            }
+        }
+        header .menu a{
+            display: none;
+        }
+
+        header button{
+            display: block;
+            background-clip: transparent;
+            border: none;
+            color: white;
+            font-size: xx-large;
+
+        }
+        button{
+            position: absolute;
+            top:30px;
+            right: 20px;
+            cursor: pointer;
+
+        }
+
+        .menu.responsive{
+            display: blcok;
+            transition: all 0.5s ease;
+        }
+
+        .menu.responsive a{
+            display: block;
+            text-align: left;
+
+
+        }
+            
+    </style>
+</head>
+<body>
+    <header>
+        <h3>header</h3>
+        <nav class="menu" id="topmenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">contact</a>
+
+        </nav>
+        <button class="icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+
+        </button>
+    </header>
+    <section class="main ">
+        <aside>
+            sidebar
+        </aside>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt qui, sunt soluta impedit eum iure saepe. Placeat quidem sint cumque inventore illo, corporis at rerum! Aperiam porro ut autem veritatis!</p>
+        </div>
+    </section>
+    <footer>
+        <p>All rights Reserved</p>
+    </footer>
+
+    <script>
+        const toggleMenu=()=>{
+            let x= document.getElementById('topMenu');
+            if(x.classNmae==="menu"){
+                x.classlist.add("responsive");
+             } else{
+                 x.classList.remove("responsive");
+        
+            }
+        }
+    </script>
+</body>
+</html>
