@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .card{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: repeat(5,1fr);
+            text-align: center;
+            /* grid-template-rows: 20vh 20vh 20vh; */
+        }
+        .card div{
+            background-color: blue;
+            padding: 12px;
+            color: #fff;
+            font-size: 4em;
+        }
+        .card div:nth-child(6){
+             grid-column-start: 1;
+            grid-column-end: span 2;   
+            grid-template-columns:minmax(700,1fr) ;
+        }
+        .card div:nth-child(7){
+            grid-column-start: 4;
+            grid-column-end: span 5;
+        }
+
+        @media screen and (max-width:768px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+</body>
+</html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <title>Document</title>
     <style>
          table,th,tr,td{
@@ -11,6 +12,7 @@
             border-collapse: collapse; */
             text-align:left;
             padding:5px;
+        
             
         } 
         div{
@@ -22,6 +24,16 @@
         input{
             padding:3px;
             border-radius: 5px;
+            margin: left 30px;
+    
+        }
+        .fas{
+            border: 1px solid black;
+            padding: 5px;
+            padding-left: 100px;
+            padding-top:10px;
+            border-radius: 8px;
+            background-color: rgba(73, 169, 233, 0.911);
         }
     </style>
 </head>
@@ -30,7 +42,7 @@
     <table>
         <tr>
             <td>Your Name</td>
-            <td>xyz</td>
+            <td><i class="fas fa-caret-down"></i></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
@@ -127,7 +139,7 @@
         </tr>
         <tr>
             <td>Name</td>
-            <td>xyz</td>
+            <td><i class="fas fa-caret-down"></i></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
@@ -181,15 +193,15 @@
         </tr>
         <tr>
             <td>Empploye Signeture</td>
-            <td colspan="4"><textarea name="signeture" id="" cols="50" rows="4"></textarea></td>       
+            <td colspan="4" ><textarea name="signeture" id="" cols="50" rows="4" style="border:2px solid black;border-radius:5px"></textarea></td>       
         </tr>
         <tr>
             <td></td>
-            <td colspan="4"><input type="text" placeholder="Print your name hear"></td>    
+            <td colspan="4"><input type="text"  size="60" placeholder="Print your name hear"></td>    
         </tr>
         <tr>
             <td></td>
-            <td colspan="4"><input type="text" placeholder="Enter Date hear"></td>
+            <td colspan="4"><input type="text" size="60" placeholder="Enter Date hear"></td>
         </tr>
         <tr>
             <th><button name="submit" id="submit">Submit</button></th>

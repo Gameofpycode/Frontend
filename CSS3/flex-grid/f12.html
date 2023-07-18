@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-areas:
+            "head head" "mbody side" "foot foot";
+            grid-column-gap:10px;
+            grid-row-gap: 10px;
+            grid-template-rows: 80px 1fr;
+            grid-template-columns: 1fr 10%;
+        }
+        header,article,aside,footer{
+            background-color: aqua;
+        }
+
+        #head{grid-area:head;}
+        #mbody{grid-area: mbody;}
+        #side{grid-area: side;}
+        #foot{grid-area: foot;}
+    </style>
+</head>
+<body>
+    <header id="head">
+        <h1>topheader</h1>
+    </header>
+
+    <article id="mbody">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A recusandae ducimus beatae quidem quod. Ut placeat, dicta similique ipsam magnam facere nulla neque iure quod nisi natus amet explicabo blanditiis.z</p>
+    </article>
+    <aside id="side">
+        <p>sidebar</p>
+    </aside>
+    <footer id="foot">
+        <p>all right are reverserd & copy 2021 </p>
+    </footer>
+</body>
+</html>
