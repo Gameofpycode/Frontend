@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        body{
+            overflow: hidden;
+            width: 100%;
+
+        }
+        .container{
+           padding: 20px;
+           background-color: blue;
+           color: white;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           flex-direction: row;
+        }
+        .card{
+            max-width: 100%;
+            background-color: gold;
+            padding: 20px;
+            color: black;
+            height: 300px;
+            margin: 10px;
+        }
+        /* mobile input- 576px
+        tabs 1024px -input-576px
+        laptop\desktop 1440px-input-1024px
+        4k screan input - 1440px */
+
+        @media screen and (max-width:576px) {
+            .container{
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                background-color: deeppink;
+                color: white;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>header-1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique laboriosam quidem ducimus excepturi assumenda, natus explicabo nostrum repudiandae ipsum ullam sint provident tenetur officia iure repellat, enim, magni quod.</p>
+        </div>
+        <div class="card">
+            <h3>header-1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique laboriosam quidem ducimus excepturi assumenda, natus explicabo nostrum repudiandae ipsum ullam sint provident tenetur officia iure repellat, enim, magni quod.</p>
+        </div>
+        <div class="card">
+            <h3>header-1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique laboriosam quidem ducimus excepturi assumenda, natus explicabo nostrum repudiandae ipsum ullam sint provident tenetur officia iure repellat, enim, magni quod.</p>
+        </div>
+        <div class="card">
+            <h3>header-1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique laboriosam quidem ducimus excepturi assumenda, natus explicabo nostrum repudiandae ipsum ullam sint provident tenetur officia iure repellat, enim, magni quod.</p>
+        </div>
+    </div>
+</body>
+</html>

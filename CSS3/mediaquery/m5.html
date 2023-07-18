@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* i pad-1,2, mini and air  */
+
+        @media only screen and (min-device-width:768px)
+                           and (min-device-width:1024px)
+                           and (-webkit-min-device-pixel-ratio:1){
+                               body{
+                                   background-color: blue;
+                               }
+                           }
+                           @media only screen and (min-device-width:1024px)
+                           and (min-device-width:768px)
+                           and (-webkit-min-device-pixel-ratio:1)
+                           and (orientation:landscape){
+                               body{
+                                   background-color: rgb(0, 255, 242);
+                               }
+                           } 
+   
+    /* a) i-pad 3,4 and pro 9.7" pixel-ratio:2' */
+
+/* i-pad pro 10.5" */
+@media only screen and (min-device-width:834px)
+                           and (max-device-width:1112px)
+                           and (-webkit-min-device-pixel-ratio:2){
+                               body{
+                                   background-color: rgb(255, 0, 76);
+                               }
+                            }
+
+/* i-pad pro 12.9" */
+
+@media only screen and (min-device-width:1024px)
+                           and (max-device-width:1366px)
+                           and (-webkit-min-device-pixel-ratio:1){
+                               body{
+                                   background-color: rgb(166, 255, 0);
+                               }
+                            }
+
+   </style>
+</head>
+<body>
+    <div><h1>i-pad</h1></div>
+</body>
+</html>
