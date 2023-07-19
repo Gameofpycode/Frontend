@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: deeppink;
+
+        }
+        .search-box{
+            display: block;
+            max-width: 900px;
+            margin: auto;
+            padding: 100px;
+            height: 100%;
+            outline: none;
+            background-color: aquamarine;  
+        }
+        .i-box{
+            overflow: hidden;
+            float: right;
+            background-color: rgb(187, 50, 205);
+            height: 4em;
+            width: 4em;
+            border-radius: 2em;
+            box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+        }
+        .i-box:hover{
+            width:400px;
+        }
+
+        input{
+            float: left;
+            width: 0px;
+            height: 2em;
+            margin: 1em;
+            margin-right: -4.5em;
+            background-color: #fff;
+            color: black;
+            font-size: 1em;
+            font-weight: 500;
+            padding: 0;
+            border: 0;
+            border-radius: 5px;
+            transition:1s;
+        }
+        .fas{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float:right;
+            width: 1.75em;
+            height: 1.75em;
+            margin: 0.125em;
+            background-color: aqua;
+            text-align: center;
+            font-size: 2em;
+            border-radius: 50%;
+            text-shadow: 0 -2px 1px rgba(0,0,0,0.3)
+        }  
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <div class="i-box">
+            <input type="search" placeholder="search">
+            <a href="#" class="icon">
+                <i class="fas fa-search"></i></a>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(236, 203, 96);
+
+        }
+        .search-box{
+            height: 4em;
+            display: flex;
+            cursor: pointer;
+            padding: 0px 20px;    
+            border-radius: 2em;
+            align-items: center;
+            justify-content: space-between;
+            outline: none;
+            background-color: rgba(109, 15, 197, 0.856);
+;
+           
+        }
+        .search-box:hover input{
+            width: 400px;
+            padding:7px 10px;
+            box-shadow: 0 0px 25px rgba(0,0,0, 0.3);
+        }
+        
+        
+        .search-box input{
+            width:0;
+            border: none;
+            border-radius: 2em;
+            font-weight: 300;
+            font-size: 1.5em;
+            background-color: white;
+            transition: 0.5s;
+            outline: none;
+
+        }
+        .search-box .fas{
+            color:  rgba(109, 15, 197, 0.856);
+;;
+            font-size: 2em;
+            position:relative;
+            left: 10px;
+            right: 25px;
+            padding: 10px;
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #fff;
+            border-radius: 50%;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+
+        }
+        .search-box a{
+            text-decoration: none;
+        }
+
+            
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <div class="i-box">
+            <input type="TEXT" placeholder="search">
+        </div>
+        <a href="#" class="icon">
+        <i class="fas fa-search"></i></a>
+    </div>
+</body>
+</html>
