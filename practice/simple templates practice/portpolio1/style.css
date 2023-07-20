@@ -1,0 +1,40 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    width: 100vw;
+}
+.page{
+    height: 100vh;
+    flex: 0.5;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background:fixed;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+
+}
+.page h3{
+    transform: rotate(90deg);
+    font-size: 100px;
+    position: relative;
+    left:0px;
+    top:100px;
+}
+.page:hover h3{
+    opacity: 0;
+    
+    
+    
+}
+.page:hover{
+    flex:5;
+}
