@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+         body{
+            width:100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(201, 90, 245, 0.766);
+        }
+    
+        .searchbar input{
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 50%;
+            border:6px rgb(219, 168, 139);
+            border-style:groove;
+            background-color: rgba(240, 240, 70, 0.918);
+            animation: anim 5s infinite ;
+            
+            
+           
+        }
+        .searchbar .stick{
+            width: 22px;
+            height: 6px;
+            background-color: rgb(143, 90, 63);
+            display: block;
+            transform: rotate(60deg);
+            float: right; 
+            transition: 1s;
+            animation: anim-stick 5s infinite ; 
+             
+
+        }
+        .searchbar input:hover{
+            width: 30vw;
+            height: 7vh;
+            border: 2px solid whitesmoke;
+            border-radius: 50px;
+            transition: 0.5s;
+            box-shadow: inset 0px 0px 5px black;
+            background-color: beige;
+            
+        }
+        /* @keyframes anim{
+            
+            
+            0%{
+                transform: translate(20px);
+                transition: 1s;
+            }
+            50%{
+                transform: translate(-20px);
+                transition: 1s;
+            }
+            100%{ transform: translate(20px);
+
+            }
+        }
+
+        @keyframes anim-stick{
+            0%{
+                transform: translate(20px) rotate(60deg);
+            }
+            
+            50%{
+                transform: translate(-20px) rotate(60deg);
+            }
+            100%{
+                transform: translate(20px) rotate(60deg);
+            }
+        }
+       
+        */
+
+    </style>
+</head>
+<body>
+    <div class="searchbar">
+        <input type="search">
+        <div class="bar">
+        <span class="stick"></span>
+    </div>
+    </div>
+</body>
+</html>
