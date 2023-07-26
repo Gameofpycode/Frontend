@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing:border-box;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #088395;
+
+        }
+
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height:100px;
+            font-size: 2em;
+            color: #ffffff;
+            background-color:#002332;
+            border: none;
+            border-radius: 50%;
+        }
+        .fa-bell{
+            animation: bell 1s ease infinite ;
+        }
+
+        button::before,button::after{
+            content: "";
+            width: 100px;
+            height:100px;
+            position: absolute;
+            z-index: -1;
+            font-size: 5em;
+            color: #ffffff;
+            background-color:#002332;
+            border: none;
+            border-radius: 50%;
+           
+        }
+
+        button::before{
+            animation: vibrate 3s ease-out infinite;
+        }
+
+        button::after{
+            animation: vibrate 1.5s ease-out infinite;
+        }
+
+        @keyframes vibrate{
+            100%{
+                transform: scale(2);
+                opacity:0;
+
+            }
+        }
+        @keyframes bell{
+            0%{
+                transform: rotate(10deg) scale(1.1);
+            }
+            20%{
+                transform: rotate(-10deg) scale(1.2);
+            }
+            40%{
+                transform: rotate(10deg) scale(1.2);
+            }
+            60%{
+                transform: rotate(-10deg) scale(1.2);
+            }
+            80%{
+                transform: scale(1.5);
+                transform: rotate(10deg);
+            }
+            100%{
+                transform: scale(1.6);
+                transform: rotate(-10deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="bell-icon"><i class="fa-regular fa-bell"></i></i></button>
+    </div>
+</body>
+</html>
