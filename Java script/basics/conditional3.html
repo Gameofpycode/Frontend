@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>use conditional to switch=add,sub,mul,div,rem a and b </h1>
+
+    <form id="myform" >
+        <div>
+            <label for="op">Chose an operation</label>
+            <select name="op" id="op">
+                <option>select one option</option>
+                <option value="add">Addition</option>
+                <option value="sub">Subtraction</option>
+                <option value="mul">multipliction</option>
+                <option value="div">division</option>
+                <option value="rem">modulo</option>
+            </select>
+        </div>
+        <div>
+            <label for="inpA">enter input a</label>
+            <input type="number" name="inpA" id="inpA" required>
+        </div>
+        <div>
+            <label for="inpB">enter input b</label>
+            <input type="number" name="inpB" id="inpB" required>
+        </div>
+        <button type="submit">execute code</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        var form = document.getElementById("myform");
+        // form.addEventListener("submit", (e)=>{
+         
+        // })
+        function submitHandler(e){
+            e.preventDefault();//avoid page refresh
+
+var key=document.getElementById('op').value;
+var a =document.getElementById('inpA').value;
+var b=document.getElementById('inpB').value;
+   //constructor =>Number,Boolean,String,Array
+
+var x = Number(a);
+var y = Number(b);
+var res=0;
+console.log(key);
+
+if(key==="add"){
+    res=x+y;
+    document.title=`addition=${res}`;
+    document.getElementById('result').innerHTML=`<h1> addition of two numbers=${res}</h1>`;
+}
+
+else if (key==="sub"){
+    res=x-y;
+    document.title=`subtraction=${res}`;
+    document.getElementById('result').innerHTML=`<h1> sub of two numbers=${res}</h1>`; 
+}
+else if (key==="mul"){
+    res=x*y;
+    document.title=`multiplication=${res}`;
+    document.getElementById('result').innerHTML=`<h1> mul of two numbers=${res}</h1>`; 
+}
+else if (key==="div"){
+    if(x>y){
+        res=x/y;
+    }
+    else{
+        res=y/x;
+    }
+    document.title=`division=${res}`;
+    document.getElementById('result').innerHTML=`<h1> division of two numbers=${res}</h1>`; 
+}
+else if (key==="mod"){
+    if(x>y){
+        res=x%y;
+    }
+    else{
+        res=y%x;
+    }
+    document.title=`modulo=${res}`;
+    document.getElementById('result').innerHtml=`<h1> madulo of two numbers=${res}</h1>`; 
+}
+else{
+    document.title=`choose proper input`;
+    document.getElementById('result').innerHtml=`<h1> choose proper operation</h1>`
+}
+        }
+        form.addEventListener("submit", submitHandler);
+
+    </script>
+</body>
+</html>
