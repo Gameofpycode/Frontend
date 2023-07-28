@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+           display: flex;
+           height: 100vh;
+           align-items: center;
+           justify-content: center;
+           background-color: #84c7377c;
+        }
+        .container{
+            width: 500px;
+            height: 300px;
+            background-color: rgb(41, 40, 40);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0px 0px 10px black;
+        }
+        .space{
+            width: 95%;
+            height: 150px;
+            background-color: rgb(41, 40, 40);
+            box-shadow:inset 0px 0px 10px rgb(0, 0, 0);
+            margin-top: 10px;
+            font-family: 'Tektur', cursive;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            color: #fff;
+        
+        
+        }
+        .space h1{
+            color: antiquewhite;
+            letter-spacing: 10px;
+            text-shadow:0px 0px 10px black,
+            0px 0px 20px rgb(161, 160, 160),
+            0px 0px 30px rgb(172, 91, 91);
+        }
+        header{
+            width: 95%;
+            height: 90px;
+            background-color:rgb(41, 40, 40);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            box-shadow: 0px 0px 5px rgb(2, 2, 2);  
+        }
+
+        button{
+            width: 60px;
+            height: 60px;
+            border: none;
+            background-color: rgb(41, 40, 40);
+            font-weight: 100;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 10px #fff,0px 0px 10px #fff;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0), inset 2px -1px 5px rgb(76, 77, 76);
+            z-index: 100;
+            cursor: pointer;
+            position: relative;
+            
+        }
+       
+        button i{
+            color: #fff;
+            font-size: 2em;
+            font-weight: 500;
+            text-shadow: 2px 0px 5px rgba(238, 201, 100, 0.623);
+        }
+        .btn1::after{
+            content: "Home";
+            color:#fff;
+            position: relative;
+            font-size: 2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            transition: 1s;
+        }
+        .btn2::after{
+            content: "Home";
+            color:#fff;
+            position: relative;
+            font-size: 2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            transition: 1s;
+        }
+        .btn3::after{
+            content: "Home";
+            color:#fff;
+            position: relative;
+            font-size: 2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            transition: 1s;
+        }
+        .btn4::after{
+            content: "Home";
+            color:#fff;
+            position: relative;
+            font-size: 2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            transition: 1s;
+        }
+        .btn5::after{
+            content: "Home";
+            color:#fff;
+            position: relative;
+            font-size: 2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            transition: 1s;
+        }
+        /* button::before{
+            content: var(--i);
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            height: 10px;
+            background-color: #fff;
+            left: -4px;
+            border-width: 7px;
+             border-style: solid;
+             padding: 10px 0;
+             background-color: rgb(7, 253, 233);
+             border-color:  transparent  transparent black transparent;
+             display: none;
+             border-radius: 20px 20px 20px 20px;
+
+        } */
+
+        button:hover{
+            width: 150px;
+            border-radius: 40px;
+            background-color:rgb(41, 40, 40);
+            transition: 0.8s;
+            box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+        }
+        button:hover::before{
+            display: block;
+        }
+        button:hover .fa-house-user{
+            display: none;
+        
+        }
+        button:hover .fa-address-card {
+            display: none;
+        
+        }
+        button:hover .fa-list-check
+        {
+            display: none;
+        
+        }
+        button:hover .fa-gears{
+            display: none;
+        
+        }
+        button:hover  .fa-phone-volume {
+            display: none;
+        
+        }
+        .btn1:hover::after{
+            content: "home";
+            color:#fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+
+        .btn2:hover::after{
+            content: "About";
+            color:#fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+
+        .btn3:hover::after{
+            content: "Projects";
+            color:#fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+        .btn4:hover::after{
+            content: "Services";
+            color:#fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+        .btn5:hover::after{
+            content: "Contacts";
+            color:#fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="btn1" style="--i:'home'"><i class="fa-solid fa-house-user"></i></button>
+            <button class="btn2" style="--i:'About'"><i class="fa-regular fa-address-card"></i></button>
+            <button class="btn3" style="--i:'projects'"><i class="fa-solid fa-list-check"></i></button>
+            <button class="btn4" style="--i:'services'"><i class="fa-solid fa-gears"></i></button>
+            <button class="btn5" style="--i:'contact'"><i class="fa-solid fa-phone-volume"></i></button>
+        </header>
+        <div class="space"><h1>MENU ICONS</h1></div>
+    </div>
+</body>
+</html>
