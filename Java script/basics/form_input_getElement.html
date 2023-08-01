@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arithmatic operations</h1>
+
+    <!-- onsubmit -> assign as attribute (js event) -->
+
+    <form onsubmit="submitHandler(event)" name="myForm" method="post">
+        <div class="form_group">
+            <label for="in1">Enter in 1</label>
+            <input type="number" name="in1" id="in1" required>    
+        </div>
+
+        <div class="form_group">
+            <label for="in2">Enter in 2</label>
+            <input type="number" name="in2" id="in2" required>    
+        </div>
+
+        <div class="form_group">
+            <input type="submit" value="calculate" class="btn">
+            <input type="reset" value="clear"> 
+
+        </div>
+
+    </form>
+
+    <div class="res" id="result"></div>
+
+    <script>
+        var in1 = document.getElementById("in1");//DOM element
+        var in2 = document.getElementById("in2");
+
+        var res=document.getElementById("result");
+        //document,quary selector("div") ("#result") (".res")
+
+        function submitHandler(event){
+            event.preventDefault();//avoid page refresh/reload
+
+            var x =Number(in1.value);
+            var y =Number(in2.value);
+
+            var out = x*y;
+            console.log(out);
+
+            res.innerHTML=`<h1>product=${out}</h1>`;
+        }
+    </script>
+</body>
+</html>

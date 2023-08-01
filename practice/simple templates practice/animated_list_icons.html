@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+
+        }
+
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            transform-style: preserve-3d;
+            transform: perspective(800);
+        }
+
+
+        .list_container ul{
+            transform: skewX(45deg);
+            
+            transform-style: preserve-3d;
+        }
+
+        .list_container ul li::before{
+            content: "";
+            width: 30px;
+            height: 39.5px;
+            background-color: rgb(87, 86, 86);
+            position: absolute;
+            left: -30px;
+            top:0px;
+            transform-origin: right;
+            transform:skewY(-40deg);
+           
+        }
+
+        .list_container ul li::after{
+            content: "";
+            width: 100%;
+            height: 25px;
+            background-color: rgb(87, 86, 86);
+            position: absolute;
+            bottom:-24.5px;
+            left:-14.5px;
+           transform: skewX(-50deg);
+         
+            
+        }
+
+        .list_container ul li{
+            width: 90px;
+            height: 40px;
+            background-color: rgb(32, 32, 32);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow:inset 0px 2px 5px rgba(49, 49, 49, 0.897);
+            transition: 1s;
+            cursor: pointer;
+        }
+        .list_container ul li:hover{
+            transform:translateX(60px) translateY(-15px);
+            background-color: var(--color);
+            box-shadow:none;
+
+        }
+        .list_container ul li:hover:before,  .list_container ul li:hover:after{
+            background-color: var(--color);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="list_container">
+        <ul class="x">
+            <li class="li" style="--color:#df20b5"><i class="fa-solid fa-bars"></i></li>
+            <li class="li" style="--color:#6934e6"><i class="fa-solid fa-database"></i></li>
+            <li class="li" style="--color:#36ee83"><i class="fa-regular fa-folder-open"></i></li>
+            <li class="li" style="--color:#d0db2d" ><i class="fa-solid fa-photo-film"></i></li>
+            <li class="li" style="--color:#e60b29"><i class="fa-solid fa-clapperboard"></i></li>
+            <li class="li" style="--color:#3ae9e0"><i class="fa-solid fa-bell-slash"></i></li>
+            <li class="li" style="--color:#ec6035"><i class="fa-regular fa-floppy-disk"></i></li>
+            <li class="li" style="--color:#a128e7f1"><i class="fa-solid fa-video-slash"></i></li>
+            <li class="li" style="--color:#01ff6bf1"><i class="fa-solid fa-users-line"></i></li>
+            <li class="li" style="--color:#eeff01f1"><i class="fa-solid fa-id-card"></i></li>
+        </ul>
+        
+    </div>
+    
+</body>
+</html>

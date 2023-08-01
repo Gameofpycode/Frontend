@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: #fff;
+
+        }
+        body{
+            width: 100vw;
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background: linear-gradient(red,rgb(197, 52, 52) 20%, rgb(20, 20, 20) 90%); 
+        }
+        .container{
+            width:70%;
+            height: 90vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+            /* box-shadow: 0px 0px 10px rgb(226, 121, 121);    */
+        }
+
+        .contente{
+            width: 90%;
+            height: 50%;
+            background-color: rgba(31, 23, 6, 0.507);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            backdrop-filter: blur(10px);
+            
+        }
+        
+        .contente .text{
+            width:65%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+         
+           
+        }
+        .contente .text h1{
+            font-size: 3em;
+            text-transform: capitalize;
+            /* text-decoration: underline; */
+            color: #fff;
+            position: relative;
+        }
+        .contente .text h1::after{
+            content: "";
+            width: 50%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+        }
+        .container .text p{
+            font-size: 1.5em;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .container .form1{
+            width: 90%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .contact{
+            width: 50%;
+            height: 100%;
+            background:linear-gradient( rgb(100, 47, 47),black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        
+        }
+        .contact .form_input input{
+            border: none;
+            outline: none;
+            padding: 6px;
+            margin: 7px 0px;
+            width: 100%;
+        }
+        .contact .form_input textarea{
+            border: none;
+            outline: none;
+            margin-top:5px;
+        }
+
+        .container .address{
+            width: 50%;
+            height: 100%;
+            background:linear-gradient( rgb(100, 47, 47),black);
+            padding: 15px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="contente">
+            <div class="text">
+                <h1>contact us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, laborum Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="img">
+                <img src="https://www.shutterstock.com/image-photo/contact-email-internet-laptop-mail-600w-2311092473.jpg" alt="" width="222" height="200">
+            </div>
+        </div>
+
+        <div class="form1">
+            <div class="contact">
+                <div class="form_input">
+                    <label for="name">Name:</label><br>
+                    <input type="name" id="name" placeholder="Enetr your name"><br>
+
+                    <label for="number">Number:</label><br>
+                    <input type="name" id="name" placeholder="Enetr mobile number"><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" placeholder="Enetr your email"><br>
+
+                    <label for="text">Message:</label><br>
+                    <textarea name="text" id="" cols="30" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="address">
+                <h3>Address</h3>
+                <p><address>#Lorem ipsum,<br>@dolor, <br> sit amet.</address></p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
