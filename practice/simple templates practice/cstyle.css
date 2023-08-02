@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:url(https://fonts.google.com/specimen/Hanken+Grotesk);
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    width: 40vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    /* border: 1px solid black; */
+    flex: 1;
+    box-shadow: 0px 4px 10px rgb(172, 169, 169);
+}
+.box .left_box{
+    width: 50%;
+    height: 100%;
+    background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 30px;
+    
+}
+
+.box .left_box ._76{
+    width: 150px;
+    height:150px;
+    background:linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    margin: 30px 0px;
+    
+}
+.box .left_box ._76 h1{
+    font-size: 4.5em;
+}
+.box .right_box{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right_box h1{
+    font-weight: 600;
+    font-size: 1.5em;
+    position: relative;
+    left: -71px;
+}
+.box .right_box div{
+    width: 80%;
+    height: 50px;
+    /* background-color: rgb(221, 186, 122); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+.box .right_box div h3 i{
+    margin-right: 10px;
+   
+}
+.box .right_box div h3 span{
+    color: hsl(210, 2%, 60%) ;
+}
+.box .right_box .memory{
+color:hsl(39, 100%, 56%) ;
+background-color:hsla(39, 100%, 56%, 0.157);
+}
+.box .right_box .Verbal{
+    color:  hsl(166, 100%, 37%);
+    background-color:  hsla(166, 100%, 37%, 0.164);
+}
+.box .right_box .reaction{
+    color:hsl(0, 100%, 67%) ;
+    background-color: hsla(0, 100%, 67%, 0.164);
+}
+.box .right_box .Visual{
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.164);
+}
+.box .right_box .continue{
+    background-color: hsl(224, 30%, 27%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}

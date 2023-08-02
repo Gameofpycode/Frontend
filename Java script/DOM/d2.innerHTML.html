@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>innerHTML and innerText</h3>
+
+    <div id="blk"></div>
+    <div id="blk2"></div>
+    <hr>
+
+    <h2 id="text"></h2>
+
+    <script>
+        document.getElementById("blk").innerHTML="<h1>this is inner html content</h1>";
+        document.getElementById("blk1").innerText="<h1>this is inner text</h1>";
+
+        document.getElementById("text").innerText="welcome to js";
+        document.getElementById("text").style.backgroundColor="deeppink";
+        document.getElementById("text").style.padding="20px";
+        document.getElementById("text").style.textAlign="center";
+    </script>
+
+</body>
+</html>

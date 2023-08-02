@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>array using constructor</h3>
+
+    <script>
+        //ref/instace=>x is an array name
+
+        var x= new Array();//x=[]
+
+        //assigning the value
+        x[0] = "blue";
+        x[1] = "red";
+        x[2] = "green";
+        x[3] ="blue";
+
+        document.write(`<h3>${x}</h3>`);
+        document.write(`<h3>${x[3]}</h3>`);
+
+        // array.forEach(callback function)
+        // array.forEach(function(param){
+        //     //param=>index
+        // })
+
+        x.forEach(function(value,index){
+            document.write(`<h1> ${index} ${value}</h1>`);
+        });
+
+    </script>
+</body>
+</html>

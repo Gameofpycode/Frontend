@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrays</h3>
+
+    <!-- array -> is a group of values of similar type
+
+    types of Arrays
+    1)Literal type
+        a.array Literal
+        b.array using constructor
+        c.array as construcctor parameter
+    2)Object Arrays
+    3)JSON(javascriptt object notaion)Array(Responce of REST )API -->
+ 
+
+    <script>
+        //array literal
+        var x=[];
+        var num=[1,3,4,5,6,7,8];
+        var user =['sachin','ram','raju','ravi','mohan'];
+        var arr =[true,1234,"admin@gamil.com",123.456];
+
+        document.write(`<h3>${arr[0]} </h3>`);
+        document.write(`<h3>${arr}</h3>`);
+
+        document.write(`<h3>${user[2]}</h3>`);
+        document.write(`<h3>${user}</h3>`);
+
+        document.write(`<h3>${num[4]}</h3>`);
+        document.write(`<h3>${num}</h3>`);
+
+        //ittiration of an array
+        for(i=0;i<user.length;i++){
+           document.write(`<h3>${user[i]}</h3>`);  
+        }
+    </script>
+
+</body>
+</html>

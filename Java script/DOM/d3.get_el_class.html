@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: crimson;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .blk{
+            color: deepskyblue;
+            font-weight: 500;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>get element bte class</h3>
+
+    <p class="text">Lorem, ipsum.</p>
+    <p class="text">Lorem, ipsum.</p>
+    <p class="text">Lorem, ipsum.</p>
+    <p class="text">Lorem, ipsum.</p>
+    <p class="text">Lorem, ipsum.</p>
+    <p class="text">Lorem, ipsum.</p>
+
+    <p class="blk">block para</p>
+    <p class="blk">block para</p>
+    <p class="blk">block para</p>
+    <p class="blk">block para</p>
+
+    <button onclick="handler()">click me</button>
+    <script>
+        function handler(){
+        var num = document.getElementsByClassName("text").length;
+        var num1= document.getElementsByClassName("blk").length;
+        alert("numb of paragraphs are =" +num);
+        alert("numb of blocks are =" +num1);
+    }
+    </script>
+
+</body>
+</html>
