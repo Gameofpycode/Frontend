@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>products</h3>
+    <section id="product"></section>
+    <script>
+        var products=[
+            {
+                id: 1,
+                title: "iPhone 9",
+                description: "An apple mobile which is nothing like apple",
+                price: 549,
+                discountPercentage: 12.96,
+                rating: 4.69,
+                stock: 94,
+                brand: "Apple",
+                category: "smartphones", 
+                thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg" 
+            },
+            {
+                id: 2,
+                title: "iPhone X",
+                description: "An apple mobile which is nothing like apple",
+                price: 899,
+                discountPercentage: 17.94,
+                rating: 4.44,
+                stock: 34,
+                brand: "Apple",
+                category: "smartphones", 
+                thumbnail: "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+            },
+            {
+                id: 3,
+                title: "iPhone X",
+                description: "An apple mobile which is nothing like apple",
+                price: 899,
+                discountPercentage: 17.94,
+                rating: 4.44,
+                stock: 34,
+                brand: "Apple",
+                category: "smartphones", 
+                thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg"
+            },
+        ];
+            console.log(products);
+
+        var container=document.querySelector("#product");
+
+        products.forEach(function(val,index){
+            //creating elements
+            let card = document.createElement("div");
+            let eTitle=document.createElement("h1");
+            let eDiscription=document.createElement("p");
+            let ePrice=document.createElement("h3");
+            let eDisPrice=document.createElement("h4");
+            let eBrand=document.createComment("h3");
+            let ecategory=document.createElement("p");
+            let eThumbnail=document.createElement("img");
+
+            //add contents elements
+            eThumbnail.src=val.thumbnail;
+            eThumbnail.alt="no image";
+            eTitle.textContent=val.title;
+            eDiscription.textContent=val.description;
+            eBrand.textContent=val.brand;
+            eDisPrice.textContent=val.discountPercentage;
+            ecategory.textContent=val.category;
+            ePrice.textContent=val.price;
+            
+
+
+            card.appendChild(eTitle);
+            card.appendChild(eDiscription);
+            card.appendChild(ePrice);
+            card.appendChild(eDisPrice);
+            card.appendChild(eBrand);
+            card.appendChild(ecategory);
+            card.appendChild(eThumbnail);
+
+            container.appendChild(card);
+
+
+
+
+
+        });
+
+    </script>
+</body>
+</html>

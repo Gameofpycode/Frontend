@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            overflow-x:hidden;
+            height: auto;
+            margin: 0;
+
+        }
+
+        #userInfo{
+            padding: 20px;
+            border: 2px solid #222;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+            grid-gap: 10px;
+        }
+
+        #userInfo div{
+            box-shadow: 2px 2px 4px black;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        #userInfo div h3{
+            text-transform: uppercase;
+            color: slateblue;
+
+        }
+
+        #userInfo div img{
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            width: 200px;
+
+        }
+
+        #userInfo div a{
+            padding: 12px 14px;
+            background-color: slateblue;
+            color: #fff;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>quary selctor</h3>
+    <section id="userInfo"></section>
+
+    <script>
+        var users=[
+           { //key:vlaue
+                id:1,
+                name:"sachin",
+                image:"https://picsum.photos/id/123/300/300",
+                eamil:"sachin@gmail.com",
+                isAdmin:false
+           },
+
+           { //key:vlaue
+                id:1,
+                name:"ramya",
+                image:"https://picsum.photos/id/124/300/300",
+                eamil:"ramya@gamil.com",
+                isAdmin:true
+           },
+           { //key:vlaue
+                id:1,
+                name:"manju",
+                image:"https://picsum.photos/id/124/300/300",
+                eamil:"manju@gamil.com",
+                isAdmin:true
+           }
+
+        ];
+
+        console.log('users=',users);
+
+
+    var conatiner = document.querySelector("#userInfo");
+
+           users.forEach(function(val,index)
+           {
+               //creat html elemts
+               let card = document.createElement('div');
+               let eImage=document.createElement("img");
+               let eNmae=document.createElement("h3");
+               let eEmail=document.createElement("p");
+               let eisAdmin=document.createElement('p');
+               let eLink=document.createElement('a');
+
+               // add conents/data to the elements
+               eImage.src=val.image;
+               eImage.alt ="no image";
+               eNmae.textContent=`${val.id} ${val.name}`;
+               eEmail.textContent=val.email;
+               eisAdmin.textContent=val.isAdmin?"admin":"non-admin";
+               eLink.href=val.image;
+               eLink.alt="no image";
+
+
+
+               card.appendChild(eImage);
+               card.appendChild(eNmae);
+               card.appendChild(eEmail);
+               card.appendChild(eisAdmin);
+               card.appendChild(eLink);
+
+               conatiner.appendChild(card);
+
+           });
+
+
+    </script>
+</body>
+</html>

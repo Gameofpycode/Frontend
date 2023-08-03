@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            min-height: 100vh;
+        }
+        .card{
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+            min-width: 300px;
+            min-height: 250px;
+            box-shadow: 0px 0px 30px rgb(206, 205, 205);
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="users">
+      
+    </div>
+    
+
+    <script>
+        const URL = "https://jsonplaceholder.typicode.com/users";
+        fetch(URL)
+        .then(res=>  res.json())
+        .then(data => {
+            console.log(data)
+            var users = document.getElementById("users");
+           data.forEach(element => {
+            users.innerHTML +=`
+            <div class="card">
+            <div class="left">
+                <h2>Name: ${element.name}</h2>
+                <h4>Username: ${element.username}</h4>
+                <p>Email: ${element.email}</p>
+                <p>Phone: ${element.phone}</p>
+                <a href=${element.website}>${element.website}</a>
+            </div>
+          
+        </div>
+            `
+           });
+        })
+        .catch(err=>alert(err.message))
+    </script>
+</body>
+</html>
