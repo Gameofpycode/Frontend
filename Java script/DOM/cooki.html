@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.cocki()</h1>
+    <button onclick="set()">set cookie</button>
+    <script>
+        function set(){
+            var x = "Be-practicle";
+            document.coockie =`userID =${x} ; expires=9 DEC 2023 12:00:00 AM GMT+5.30`;
+            alert("cookies set susscefully");
+            window.location.reload();
+        }
+
+        // self triggerd function
+        (function(){
+            console.log(document.cookie);//string
+            let res = document.cookie.split("=");
+            console.log("res=", res);
+            console.log("res[0]=", res[0]);
+            console.log("res[1]=", res[1]);
+            document.getElementById('result').innerText=`key = ${res[0]} and value =${res[10]}`;
+
+        })();
+    </script>
+</body>
+</html>
