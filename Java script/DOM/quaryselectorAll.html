@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 60%;
+            margin: auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            
+        }
+        .container select{
+            width: 300px;
+        }
+        .container .btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .container .btn button{
+            width: 200px;
+            height: 30px;
+            background-color: tomato;
+            color: #fff;
+            border: none;
+        
+        }
+        .container .btn button:hover{
+            background-color: black;
+            cursor: pointer;
+            
+            transform: scale(1.1);
+            transition: 1s;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>document.querySelectorAll and replacechildren </h1>
+
+    <section class="container">
+        <div class="left">
+            <select name="no" id="no" size="10">
+                <option value="blue">blue</option>
+                <option value="white">white</option>
+                <option value="orange">orange</option>
+                <option value="red">red</option>
+                <option value="pink">pink</option>
+                <option value="green">green</option>
+                <option value="gold">gold</option>
+                <option value="yellow">yellow</option>
+                <option value="black">black</option>
+                <option value="brown">brown</option>
+            
+            </select>
+        </div>
+        <div class="btn">
+            <button id="add">Add selection</button>
+            <button id="remove">Remove selection</button>
+
+        </div>
+        <select name="yes" id="yes" size="10">
+            <div class="right">
+
+            </div>
+        </select>
+
+    </section>
+
+    <script>
+        let no = document.querySelectorAll('#no');
+        let yes = document.querySelectorAll('#yes');
+
+        let addbtn = document.querySelector('#add');
+        let removebtn = document.querySelector('#remove');
+
+        //domTarget.addEventlistner(evnt,callback)
+            addbtn.addEventListener('click',function(e){
+            e.preventDefault();
+    
+            let selOpt = document.querySelectorAll('#no option:checked');
+            console.log('selected options=',selOpt);
+
+            let exstOpt = document.querySelectorAll('#yes option');
+            yesSel.replaceChildren(...selOpt, ...exstOpt);
+
+
+        });
+        removebtn.addEventListener('click',function(e){
+            e.preventDefault();
+            
+
+        });
+    
+
+    </script>
+</body>
+</html>

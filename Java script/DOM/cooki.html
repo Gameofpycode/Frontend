@@ -17,6 +17,23 @@
             window.location.reload();
         }
 
+        //clear cookie()
+        function clearHandler(){
+            if(confirm(`are you sure to clear cookie`)){
+                let myTime=new Date();
+
+                myTime.setTime(myTime.grtTime()-1);
+                console.log('myTime', myTime.toGMTString());
+
+                document.cookie=`userId=;expires=${myTime.toGMTString()}`;
+                alert('cookie cleared successfully');
+                window.location.reload();//PAGE REFRESS current active page
+
+            }else{
+                comsole.log("failed");
+            }
+        }
+
         // self triggerd function
         (function(){
             console.log(document.cookie);//string

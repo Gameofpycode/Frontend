@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>window.close() and window.open()</h4>
+
+    <button onclick="openhandler()">open</button>
+    <button onclick="closehandler()">close</button>
+
+    <script>
+        var webStart;
+
+        function openhandler(){
+            // alias for window.open()
+            webStart = open('https://github.com','sample window', 'width=200px;height=300px');//open in new window
+            document.write('wait for 5sec');
+
+            setTimeout(()=>{
+                webStart.close()
+            },5000);
+        }
+        function closehandler(){
+            console.log('webStart=',webStart)
+            webStart.close();
+        }
+    </script>
+</body>
+</html>
