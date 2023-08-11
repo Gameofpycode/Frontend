@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>custom constructor</h1>
+
+    <script>
+        //non parameter
+        function Person(){
+            // let x = 23;
+            this.name ="sachin";//fixed type
+            this.email="sachin@gmail.com";
+            this.getName=function(){
+                return this.name;
+                // document.write(`<h1>Email= ${this.name}</h1>`);
+            };
+            this.getEmail=function(){
+              document.write(`<h1>Email= ${this.email}</h1>`);
+
+           };
+        }
+
+        let x = new Person();
+        document.write(`<h1>${x.getName()}</h1>`);
+        x.getEmail();
+
+        function User(na,em){
+            this.name=na;
+            this.email=em;
+            this.getName=function(){
+                return this.name;
+            };
+            this.getEmail=function(){
+              document.write(`<h1>Email= ${this.email}</h1>`);
+
+           };
+            
+        }
+        // let y = new User("kumar","kumar@gmail.com" );
+        // let y = new User("ram","ram@gmail.com" );
+
+    </script>
+</body>
+</html>

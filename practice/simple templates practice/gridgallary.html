@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            width: 100vw;
+            min-height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container{
+            min-width: 100%;
+            min-height: 100Vh;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background-color: red;
+            grid-gap: 10px;
+            overflow: hidden;
+            
+
+        }
+
+        .container img{
+            width: 400px;
+            height:300px;
+            border-radius: 30px;
+
+        }
+        .container img:nth-child(odd){
+            grid-column-start: span 2;
+            grid-column-end: span 4;
+        }
+        .container img:nth-child(even){
+            grid-template-columns: span 4;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://img.freepik.com/free-photo/beautiful-retro-nature-with-flowers_23-2149681494.jpg?t=st=1691686457~exp=1691687057~hmac=e6412aa1631faf4440783c34ea57724456dbc88f3a45d0c5e54580f894c3b848" alt="">
+        <img src="https://img.freepik.com/free-photo/back-view-kid-lavender-field_23-2149532298.jpg?t=st=1691686457~exp=1691687057~hmac=b90db247f88883808d34ea8d9a1e99863bbbdccde701a32f76ab676941c6bae6" alt="">
+        <img src="https://img.freepik.com/free-photo/side-view-smiley-woman-holding-hen_23-2149456919.jpg?t=st=1691686457~exp=1691687057~hmac=f0979f1ad51b11015f635a3aa621ed9d2aaa373b5141042b372b225dd9320228" alt="">
+        <img src="https://img.freepik.com/free-photo/african-lion-portrait-warm-light_475641-46.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=sph" alt="">
+        <img src="https://img.freepik.com/free-photo/tiger-jungle_188544-8719.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=sph" alt="">
+        <img src="https://img.freepik.com/free-photo/fantastic-wonderland-forest-landscape-with-mushrooms-flowers-ai-generative_157027-1737.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=sph" alt="">
+        <img src="https://img.freepik.com/free-photo/butterfly-orange-flower_1112-625.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=sph" alt="">
+        <img src="https://img.freepik.com/free-photo/selective-focus-shot-beautiful-butterfly-sitting-branch-with-small-pink-flowers_181624-14352.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=sph" alt="">
+        <img src="https://img.freepik.com/free-photo/beautiful-high-angle-shot-pink-marguerite-daisies-garden-sunlight_181624-27379.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=ais" alt="">
+        <img src="https://img.freepik.com/free-photo/vertical-shot-pink-diascia-flowers-basket_181624-25537.jpg?size=626&ext=jpg&ga=GA1.2.2128482742.1689869008&semt=ais" alt="">
+        <img src="https://img.freepik.com/free-photo/spring-landscape-with-flowers-butterflies_52683-107767.jpg?w=996&t=st=1691691911~exp=1691692511~hmac=40d0913ab6553064b13a4f77eb89b90ab122e22c1bd11da3b3d9db265d011794" alt="">
+        <img src="https://img.freepik.com/free-photo/spring-landscape-with-flowers-butterflies_52683-107768.jpg?w=360&t=st=1691692682~exp=1691693282~hmac=fe213786c8c5683e6b00e995cbb9bc558f005bf56ff1c34c2f33666170a616f1" alt="">
+    </div>
+</body>
+</html>

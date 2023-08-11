@@ -26,6 +26,13 @@
         .text h1{
             color: gold;
             font-size: 5em;
+            animation-name:anim;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
             
         }
         .text h1 span{
@@ -42,15 +49,28 @@
             0%{
                 color: #fff;
                 letter-spacing: 1.2em;
+                word-spacing: 1em;
+                opacity: 0.5;
+            }
+            25%{
+                transform: rotateY(360deg);
             }
             50%{
                 text-shadow: 10px -10px 5px #fff;
+                opacity: 0.7;
+                
                
+            }
+            75%{
+
+                
             }
 
             100%{
                 color: gold;
                 letter-spacing: 0.1em;
+                word-spacing: 0em;
+                opacity: 1;
             }
             }
         }
@@ -58,7 +78,13 @@
 </head>
 <body>
     <div class="text">
-        <h1>sa <span>CHINNA</span>
+        <h1>sa 
+            <span>C</span>
+            <span>H</span>
+            <span>I</span>
+            <span>N</span>
+            <span>N</span>
+            <span>A</span>
         </h1>
     </div>
 </body>
