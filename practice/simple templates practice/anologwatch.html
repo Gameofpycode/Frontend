@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .watch_face{
+            
+            max-width: 100%;
+            min-width: 250px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: rgb(230, 227, 215);
+            border: 3px solid black;
+            background: url(https://i.pinimg.com/originals/92/11/5e/92115e8ad518f665cbba4ef1b30d3802.jpg)no-repeat center;
+            background-size: cover;
+            position: relative;
+
+        }
+        .container .watch_face span{
+            position: absolute;
+            transform-origin:bottom center;
+            bottom: 50%;
+            left: 50%; 
+
+        }
+        .watch_face .second{
+            width: 1px;
+            height: 80px;
+            background-color: red;
+            
+        }
+        .watch_face .minute{
+            width: 2px;
+            height: 70px;
+            background-color: rgb(78, 72, 72);
+           
+
+        }
+        .watch_face .hour{
+            width: 4px;
+            height: 57px;
+            background-color: rgb(0, 0, 0);
+          
+        }
+        .watch_face .nob_ring{
+            width: 10px;
+            height: 10px;
+            border: 4px solid red;
+            background-color: rgb(253, 253, 253);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="watch_face">
+            <span class="second" id="second"></span>
+            <span class="minute" id="minute"></span>
+            <span class="hour" id="hour"></span>
+            <span class="nob_ring"></span>
+        </div>
+    </div>
+    <script>
+        function rotateHand(){
+            var date = new Date();
+        var time_seconds=date.getSeconds();
+        console.log(time_seconds);
+
+        var time_minutes=date.getMinutes();
+        console.log(time_minutes);
+
+        var time_hours=date.getHours();
+        console.log(time_hours%12);
+
+        var second = document.getElementById("second");
+        var minute = document.getElementById("minute");
+        var hours = document.getElementById("hour");
+
+        var hour_deg=(time_hours*30)+(0.5*time_minutes);
+        var minutes_deg=(time_minutes*6)+(0.1*time_seconds);
+        var seconds_deg=(time_seconds*6);
+        console.log('h=',hour_deg);
+
+        hours.style.transform=`rotate(${hour_deg}deg)`;
+        minute.style.transform=`rotate(${minutes_deg}deg)`;
+        second.style.transform=`rotate(${seconds_deg}deg)`;
+        }
+        setInterval(rotateHand,1000);
+        
+
+    
+
+
+    </script>
+</body>
+</html>
