@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>onmousedown and on mouseup</h3>
+
+    <div id="blk" onmousedown="downHandler()" onmouseup="upHandler()">
+    mousedown and mouse up</div>
+
+
+    <script>
+        function downHandler(){
+            document.getElementById("blk").style.background="crimson";
+            document.getElementById("blk").innerHTML="<h1>mouse down</h1>";
+        }
+        function upHandler(){
+            document.getElementById("blk").style.background="gold";
+            document.getElementById("blk").innerHTML="<h1>mouse up</h1>";
+        }
+    </script>
+</body>
+</html>

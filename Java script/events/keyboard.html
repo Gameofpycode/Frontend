@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- events
+    onkeypress=> deprecated
+    onkeydown=> will have one of dealy
+    onkeyup=>no delay -->
+
+    <form action="">
+        <label for="">enter Name</label>
+        <input type="text" name="name" id="name" onkeydown="getName()">
+
+    </form>
+    <h3 id="output"></h3>
+
+    <script>
+        function getName(){
+            var myName = document.getElementById("name");
+            document.getElementById("output").innerText = myName.value;
+        }
+    </script>
+</body>
+</html>
