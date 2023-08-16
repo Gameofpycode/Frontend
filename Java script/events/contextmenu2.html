@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #ccc;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        #contextmenu{
+            position:fixed;
+            width: 150px;
+            background-color: #111;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 5px;
+            visibility: hidden;
+            z-index: 10000;
+        }
+
+        #contextmenu .item{
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 10px;
+            cursor:pointer;
+            border-bottom: 1px solid rgb(53, 52, 52);
+            border-radius: 5px;
+            transition:all 0.4s ease; 
+        }
+
+        #contextmenu .item:hover{
+            background-color: rgb(54, 36, 36);
+        }
+        #contextmenu.visible{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div id="contextmenu">
+        <a href="#" class="item">New folder</a>
+        <a href="#" class="item">file Upload</a>
+        <a href="#" class="item">folder Upload</a>
+        <a href="#" class="item">google doc</a>
+        <a href="#" class="item">google sheets</a>
+        <a href="#" class="item">google form</a>
+    </div>
+
+    <script>
+        const contextmenu = document.getElementById("contextmenu");
+        const pageBody = document.querySelector("body");
+         pageBody.addEventListener("contextmenu",(e)=>{
+             e.preventDefault();
+             const { clientX:mouseX,clientY:mouseY}= e;
+             console.log(`x  axis = ${mouseX}:y axis = ${mouseY}`);
+
+             contextmenu.style.left = `${mouseX}px`;//x_axis
+             contextmenu.style.top = `${mouseY}px`;//y_axis
+
+             contextmenu.classList.add("visible");
+
+             setTimeout(function(){
+                 contextmenu.classList.remove("visible");
+             },10000);
+
+         });
+    </script>
+</body>
+</html>

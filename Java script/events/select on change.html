@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>onchange</h3>
+    <h1 id="output"></h1>
+    <form action="">
+        <label for="">choose alnguage</label>
+        <select name="lan" id="lan" onchange="selHandler()">
+            <option value="null">choose laguage</option>
+            <option value="kn">Kannada</option>
+            <option value="en">english</option>
+            <option value="hindi">hindi</option>
+            <option value="telugu">telugu</option>
+            <option value="tally">tamil</option>
+        </select>
+
+        <script>
+            function selHandler(){
+                let lan = document.getElementById("lan").value;
+                    if(lan==="null"){
+                        document.getElementById("output").innerText="no value selected";
+                    }else{
+                        document.getElementById("output").innerText=`you have selected ${lan}`;
+                    }
+
+
+            }
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #ccc;
+        }
+        .blk{
+            width: 50%;
+            background-color: red;
+            color: #fff;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body oncontextmenu="contextHandler(event)">
+    <h3>oncontextmenu()</h3>
+
+    <div class="blk" id="blk">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione a modi, dicta exercitationem enim nesciunt blanditiis et fugiat nostrum voluptatibus tenetur fugit ut consectetur animi, asperiores autem quam quo officiis rerum repudiandae! Aliquam veritatis minus, debitis, repudiandae voluptatum similique cupiditate tenetur perferendis magni provident consequuntur! Perferendis quae, excepturi eos consequatur beatae porro nobis vitae, expedita eum ipsa debitis voluptatibus, enim iste sapiente sint doloremque sunt aliquam! Blanditiis molestiae numquam assumenda. Facilis eos, aliquid neque, non tempora deserunt dicta molestiae odit, eaque voluptatibus quae officiis expedita. Quasi voluptates nobis nisi cumque perferendis et nihil laudantium ad tempore nam id, vero molestias?</p>
+    </div>
+
+    <script>
+        function contextHandler(event){
+            event.preventDefault();
+            alert("Right click has disabled");
+        }
+    </script>
+    
+</body>
+</html>
