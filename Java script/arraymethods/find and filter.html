@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array method --> filter method</h1>
+
+    <script>
+        var user = [
+            {
+                id:1,
+                first:"raju",
+                last:"kusmar",
+                email:"raju@gamil.com"
+                
+            },
+            {
+                id:2,
+                first:"john",
+                last:"Mitchl",
+                email:"jhon@gamil.com"
+                
+            },
+            {
+                id:3,
+                first:"raju",
+                last:"sharma",
+                email:"raju2@gamil.com"
+                
+            },
+            {
+                id:1,
+                first:"chandu",
+                last:"guptha",
+                email:"chandu@gamil.com"
+                
+            }
+        ];
+
+        console.log('output=',user);
+
+        //array.filter -> output is in array format
+        var user1 = user.filter(function(items){
+            return items.first === "raju";
+        });
+        console.log("output1=", user1);
+
+        //array.find => output is in object format
+        var user2 = user.find(function(item){
+            return item.id===3;
+        });
+        console.log("output2=",user2);
+
+
+    </script>
+</body>
+</html>

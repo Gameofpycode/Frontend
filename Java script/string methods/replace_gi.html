@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>replace string</h3>
+    <script>
+        var str = "welcome to jsavascript an we are learning JAVASCRIPT strings method";
+
+        document.write(`<h3> ${str}</h3>`);
+        document.write(`<h3> ${str.replace("javascript","JS")}</h3>`);
+        document.write(`<h3> ${str.replace(/javascript/gi,"JS")}</h3>`);//in any case
+
+        //gi=>globle case insensetive 
+        // /string/->regualr expression statement
+
+    </script>
+</body>
+</html>

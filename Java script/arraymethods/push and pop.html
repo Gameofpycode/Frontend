@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>push and pop</h3>
+    <!-- push(value)=> add new item with the wnding position -->
+    <!-- pop()=>remove item from end -->
+    <script>
+        var x = ["blue","white"];
+        document.write(`<h3> before push = ${x}<h3>`);
+        x.push("pinky");
+        document.write(`<h3> after push = ${x}<h3>`);
+        x.push("green");
+        document.write(`<h3> after push = ${x}<h3>`);
+        x.pop();
+        document.write(`<h3> after pop = ${x}<h3>`);//green
+        x.pop();
+        document.write(`<h3> after pop = ${x}<h3>`);//pinky
+        x.pop();
+        document.write(`<h3> after pop = ${x}<h3>`);//white
+    </script>
+
+</body>
+</html>
