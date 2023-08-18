@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            /* width: 100vw; */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:linear-gradient(rgb(224, 196, 143),rgb(230, 176, 76));
+        }
+        .login_card{
+            width: 350px;
+            height: 450px;
+            background:linear-gradient(rgb(2, 185, 2),rgb(117, 238, 117));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+
+        }
+        .img img{
+            border-radius: 50%;
+        }
+        .inputs{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #fff;
+        }
+        .inputs input{
+            border: none;
+            outline:none;
+            border-bottom: 1px solid #fff;
+            background-color: transparent;
+            min-width: 100%;
+            font-size:1em;
+            padding: 10px 0px; 
+            color: #fff;  
+        }
+        .button{
+            width: 100%;
+            padding: 10px;
+        }
+        .button .btn{
+            width: 30%;
+            height: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius:5px;
+            border: none;
+            background: linear-gradient(rgb(241, 121, 40),rgb(209, 32, 32)
+            );
+            color: rgb(238, 238, 238);
+
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login_card">
+            <div class="img">
+                <img src="data:image/jpeg;base64,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" alt="" width="70" height="70">
+    
+            </div>
+            <div class="inputs">
+                <div class="name">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="Email">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="password">
+                    <label for="pass">Password</label><br>
+                    <input type="password" name="pass" id="pass" required>
+                    <!-- <input type="check" name="check" id="check" >show password -->
+                </div> 
+                        
+            </div>
+            <div class="button">
+                <button class="btn" id="btn">Submit</button>
+    
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
