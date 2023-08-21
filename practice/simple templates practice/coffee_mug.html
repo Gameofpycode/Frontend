@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Satisfy&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Satisfy', cursive;
+
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(140, 215, 218);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* z-index: 3; */
+
+        }
+        .mug{
+            width: 60%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 4;
+        }
+            /* background-color: rgb(214, 161, 93); */
+
+    
+        .cup{
+            width: 400px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0px 0px 200px 200px;
+            z-index: 2;
+            position: relative;
+            /* top: 0px; */
+            bottom: -150px;
+            box-shadow:inset 5px -10px 10px rgb(255, 255, 255),inset 0px 10px 30px rgb(80, 77, 75),inset 30px 10px 30px rgb(107, 106, 105);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cup::after{
+            content: " ";
+            width: 40%;
+            height: 25%;
+            /* background-color: red; */
+            position: absolute;
+            top: 20px;
+            right:-120px;
+            border-radius: 50%;
+            transform: rotate(-30deg);
+            border: 50px solid rgb(254, 254, 254) ;
+            z-index: -6;
+        }
+        .cup::before{
+            content: " ";
+            width: 380px;
+            height: 100px;
+            border-radius: 50%;
+            background:radial-gradient(rgb(212, 203, 147) ,rgb(150, 82, 43) 65%);
+            position: absolute;
+            top:-60px;
+            right: 0;
+            border: 11px solid rgb(185, 184, 182);
+            /* box-shadow: 0px 0px 10px black; */
+        }
+        .plate{
+            width: 600px;
+            height: 150px;
+            background:radial-gradient(rgb(71, 71, 71) 30%,rgb(209, 209, 207) 50%)  ;
+            border-radius: 50%;
+            border: 10px solid rgb(134, 134, 132);
+            z-index: 1;
+            box-shadow: inset 0px 0px 10px rgb(104, 101, 101);
+        }
+        .container .plate_base{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(245, 244, 241);
+            border-radius: 50%;
+            position: relative;
+            top: -80px;
+            box-shadow:inset 0px 2px 8px rgb(70, 68, 66)
+            
+        
+            /* z-index: 100; */
+        }
+        .cup h1{
+            font-size: 3em;
+            text-transform: capitalize;
+            letter-spacing: 3px;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="mug">
+            <div class="cup">
+                <h1>coffee...</h1>
+            </div>
+        </div>
+        <div class="plate"></div>
+        <div class="plate_base"></div>
+   </div>
+    
+</body>
+</html>
