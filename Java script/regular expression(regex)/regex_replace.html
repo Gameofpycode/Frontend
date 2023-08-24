@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string replace using regualr expressions</h1>
+
+    <script>
+        let regex = /apples/g;
+        let regexIgnoreCase = /apples/gi;
+        let regexSingle = /apples/i;
+        let str = "apples are round, and apples are juice.";
+
+
+
+        console.log(`${str.replace(regex,"orange")}`);
+        console.log(`${str.replace(regexIgnoreCase,"orange")}`);
+        console.log(`${str.replace(regexSingle,"orange")}`);
+
+    </script>
+</body>
+</html>

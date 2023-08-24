@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>REGULAR EXPRESSION WITH STRINGS</H1>
+
+    <script>
+        var str = "johndavid";
+        var res = /[i-n]+/;
+        //match
+        console.log('match=',str.match(res));
+
+        // replace 
+        console.log(`replace:${str.replace(res,"test")} `);//testson
+
+        //split
+        var str1 ="stringstrings";
+        console.log(`split:${str1.split(res)}`);
+
+        //search
+        console.log(`search:${str1.split(res)} `)
+
+    </script>
+</body>
+</html>

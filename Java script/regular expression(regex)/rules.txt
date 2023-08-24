@@ -1,0 +1,21 @@
+rules of regualr expression
+
+^ -> defines the begining of patterns
+$ -> defines the ending  of patterns
+
+[]-> character set 
+
+() -> capturing group that group of multiple charecter
+
+[abcdef]-> matches any single occurancey of any of the caracter a,b,c,d,e,f 
+
+[a-z] -> matches any single lower cases
+[A-Z] -> matches any single upper cases
+
+[a-zA-Z] -> match any single letter from a-z ignoring the cases
+
+.-> match any charecter expect line break 
+? -> matches 0 and 1 occarance of the preceding character, set or group
+
+*-> matches 0 or more occurance of the preceding char , set or group
++-> matches i or more 

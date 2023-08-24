@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exec()</h1>
+
+    <p>it return an array of captures.or null if there no match</p>
+
+    
+
+    <script>
+        var re = /a/g;
+        var result;
+        console.log('input is =','barbarbazt');
+
+        while((result = re.exec('barbarbazt'))!== null){
+            console.log('re = ',re);
+            console.log(`found:'${result[0]}',next exec starts at '${re.lastIndex}'`);
+        }
+
+    </script>
+      <script>
+        var re1 = /that/gi;
+        var inp="Lorem ipsum dolor that sit amet consectetur, adipisicing elit. Repellendus eum provident error dignissimosThat quisquam, magni enim. Qui voluptatem necessitatibus  that odit molestias accusantium that consequuntur tenetur dolore ipsum debitis. Nobis, nulla enim?"
+
+        var result1;
+
+        
+       
+
+        while((result1 = re1.exec(inp))!== null){
+            console.log(`found:'${result1[0]}',next exec starts at '${re1.lastIndex}'`);
+        }
+
+    </script>
+
+
+</body>
+</html>

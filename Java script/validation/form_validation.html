@@ -5,6 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+
+        body{
+            background-color: #f9f9f9;
+            font-size: 1em;
+        }
+
+        h2{
+            text-align: center;
+            text-decoration: underline;
+        }
+        form{
+            width: 400px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%,0);
+            background-color: #eee;
+            border: 2px solid #222;
+            padding: 15px 40px 40px;
+        }
+        .row{
+            margin: 12px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .row input[type="text"],input[type="email"],select{
+            padding: 10px 8px;
+            width: 100%;
+        }
+
+        .btn-sub{
+            background-color: cornflowerBlue;
+            color:#fff;
+            border:none;
+            outline: none;
+            box-shadow: 2px 2px 40px rgba(7, 7, 7, 0.363);
+            cursor: pointer;
+            padding: 12px 10px;
+
+        }
+        .btn-rst{
+            background-color: crimson;
+            color:#fff;
+            border: none;
+            outline: none;
+            box-shadow: 2px 2px 40px rgba(7, 7, 7, 0.363);
+            cursor: pointer;
+            padding: 12px 10px;
+        }
+
+        .erroe{
+            color:crimson;
+        }
+    </style>
 </head>
 <body>
     <form name="cForm" onsubmit="return validate(event)" method = "post">
@@ -75,5 +136,7 @@
     </div>
 
     </form>
+
+    <script src="./validate.js"></script>
 </body>
 </html>

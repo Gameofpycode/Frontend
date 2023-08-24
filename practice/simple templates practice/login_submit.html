@@ -29,6 +29,7 @@
             align-items: center;
             gap: 20px;
             padding: 30px;
+            
 
         }
         .img img{
@@ -55,6 +56,11 @@
         .button{
             width: 100%;
             padding: 10px;
+            text-align: right;
+            transition:  all 2s;
+            padding: 10px;
+
+
         }
         .button .btn{
             width: 30%;
@@ -68,7 +74,8 @@
             background: linear-gradient(rgb(241, 121, 40),rgb(209, 32, 32)
             );
             color: rgb(238, 238, 238);
-
+            cursor: pointer;
+            
             
 
         }
@@ -84,7 +91,7 @@
             <div class="inputs">
                 <div class="name">
                     <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" onclick="input()" required>
                 </div>
                 <div class="Email">
                     <label for="email">Email</label><br>
@@ -97,13 +104,37 @@
                 </div> 
                         
             </div>
-            <div class="button">
+            <div class="button" id="button" >
                 <button class="btn" id="btn">Submit</button>
     
             </div>
         </div>
     </div>
     <script>
+             let x = document.getElementById('button');
+             var p = window.getComputedStyle(x);
+             var v = p.getPropertyValue("text-align");
+             console.log(v)
+             var b = true
+
+           x.addEventListener("mouseover",()=>{
+               b=(!b)
+               console.log(b)
+
+               if(b){
+                document.getElementById('button').style.textAlign="left";
+                document.getElementById('button').style.transition="1s";
+               }
+               else{
+                document.getElementById('button').style.textAlign="right";
+                document.getElementById('button').style.transition="1s";  
+               }
+           })
+
+
+          
+             
+
 
     </script>
 </body>

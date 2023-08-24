@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form autocomplete="off" method = "post">
+       <div>
+           <label for="mobile">email id</label>
+           <input type="text" name ="mobile", id="mobile" onkeyup="validateEmail()">
+           <span id = "status"></span>
+       </div>
+       <div>
+           <input type="submit" value="sibmit">
+       </div>
+   </form> 
+
+   <script>
+       function validateEmail(){
+           let mobile = document.getElementById("mobile").value;
+           let status = document.getElementById("status");
+           let re = /^(+91[\-\s]?)?(91)?[6-9]\d{9}$/;//+91,+91-98453344...,91,
+
+           if(re.test(mobile)){
+               status.innerText = "valid mobile id ";
+               status.style.color = "green";
+
+           }else{
+               status.innerText = "invalid mobile id";
+               status.style.color = "orangered";
+
+           }
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>function, arrays and objects as properties</h3>
+
+    <script>
+        var user = {
+            name = "mohan",
+            email = "mohan@gmail.com",
+            hobbies = ["cycling", "riding", "driving"],
+            getName = function(){
+                return this.adress.city + ',pin = '+ this.address.pincode;
+
+            }
+        };
+
+        document.write(`<h3> object = ${user.name}<h3>`);
+        // document.write(`<h3> hobbies = ${}<h3>`)
+    </script>
+</body>
+</html>
