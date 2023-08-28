@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>entries to object</h3>
+
+    <script>
+        const userEntry = new Map([
+            ['name','jhon'],
+            ['email','jhpon@gmail.com']
+        ]);
+
+        console.log('emtries=',userEntry);
+
+        const object = Object.fromEntries(userEntry);
+
+        console.log('object user',object);
+    </script>
+</body>
+</html>
