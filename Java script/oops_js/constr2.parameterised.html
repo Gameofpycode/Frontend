@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>parameterised contructore</h1>
+    <script>
+        function Course(ti,du,fee){
+            this.title=ti;
+            this.fee=fee;
+            this.duration=du;
+        }
+
+        let x1 = new Course("python","1month",12000);
+
+        document.write(`<h2> title = ${x1.title}</h2>`);
+        document.write(`<h2> fee = ${x1.fee}</h2>`);
+        document.write(`<h2> duration = ${x1.duration}</h2>`);
+
+
+        document.write(`<h2> =======================================================================</h2>`);
+
+        let x2 = new Course("js","1.5moth",14000);
+
+        document.write(`<h2> title = ${x2.title}</h2>`);
+        document.write(`<h2> fee = ${x2.fee}</h2>`);
+        document.write(`<h2> duration = ${x2.duration}</h2>`);
+
+        
+    </script>
+</body>
+</html>

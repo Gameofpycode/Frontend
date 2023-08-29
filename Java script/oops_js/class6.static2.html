@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>static method in side the class</h1>
+
+    <script>
+        class Course{
+            constructor(title,dur){
+                document.write(`<h1> constroctr called</h1>`);
+                this.title = title;
+                this.duration =dur;
+
+            }
+            static print(val){
+                //will allow this pointer
+                //static functions call posible only by the class name
+
+                document.write(`<h1>this is staic method</h1>`);
+                document.write(`<h1>property Title = ${this.title}</h1>`);
+                document.write(`<h1>paramter Title = ${val}</h1>`);
+                
+            }
+            //non static
+            courseInfo(){
+                document.write(`<h3>${this.title} ${this.duration}</h3>`);
+            }
+        }
+
+        Course.print("Be-Practicle");
+
+
+        let x = new Course("js","1month");
+
+        x.courseInfo();//method call w.r.to instance
+    </script>
+</body>
+</html>

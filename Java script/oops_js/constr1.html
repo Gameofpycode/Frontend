@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>constructore method(Es-5)</h1>
+
+    <script>
+        // constructore followes function and objwect
+        // name of the constructore first letter start with uppercase
+        // constructor properties create using this
+        // create an intsace to constructore using 'new'
+        // constructore can't return
+        function User(){
+            this.name = "sonu";
+            this.email = "sonu@gmail.com";
+            this.age=22;
+            let a = 12;
+
+        };
+
+        //instance --> it is a varibvale we provide permision to acces the properties of the constructore
+
+        let x = new User();
+
+        console.log('constructore instace =',x);
+
+        document.write(`<h1> name = ${x.name}</h1>`);
+        document.write(`<h1> email = ${x.email}</h1>`);
+        document.write(`<h1> age = ${x.age}</h1>`);
+    </script>
+</body>
+</html>

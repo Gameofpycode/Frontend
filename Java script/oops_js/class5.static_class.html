@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>static method</h1>
+
+    <script>
+        class Person{
+            constructor(){
+                document.write('hi am a constroctor');
+                this.name = "Mahesh";
+
+            }
+            static getNmae(na){
+                //this poiter is inactive inside the static methods
+                document.write('<h1>hi ' +this.name  +' welcome </h1>');
+                document.write('<h1>hi ' + na  +' welcome to js </h1>');
+            }
+        }
+
+        Person.getNmae("Raju");
+    </script>
+</body>
+</html>
