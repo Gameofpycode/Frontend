@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>getter and setter</h1>
+    <script>
+         class Card{
+            constructor(){
+                this.number=''
+            } 
+             set cardNum(x){
+                this.number = x;
+            }
+            get cardNum(){
+                return this.number;
+            }
+        }
+
+        let x = new Card();
+        console.log('x=',x)
+
+        x.cardNum = "0045 3344 5544 2177"
+        document.write(`<h1>first card is .... = ${x.cardNum}</h1>`);
+
+        x.number = "0045 3344 5544 2177"
+        document.write(`<h1>first card is .... = ${x.number}</h1>`);
+
+    </script>
+</body>
+</html>

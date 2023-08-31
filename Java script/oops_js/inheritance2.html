@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance without parametr</h1>
+
+    <script>
+        //non parametr super class
+        class Course{
+            constructor(){
+                this.title="python full stack";
+                this.fee = 50000;
+            }
+
+            getCourseDetails(){
+                document.write(`<h1>course Name = ${this.title},and fee = ${this.fee}</h1>`);
+            }
+        }
+
+        //base class
+
+
+        class User extends Course{
+            constructor(){
+                super();
+            }
+        }
+        let x = new User()
+
+        x.getCourseDetails();
+    </script>
+</body>
+</html>

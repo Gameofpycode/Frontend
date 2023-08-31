@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get and set methos</h1>
+
+    <script>
+        class Car{
+            constructor(){
+                this.title=''
+            }
+            get title(){
+                return `my car is .... ${this._name}`;//=> alias property to title
+            }
+            set title(x){
+                this._name = x;
+            }
+        }
+
+        let x = new Car();
+        console.log('x=',x)
+
+        x.title = "mahindra Thar ";
+        document.write(`<h1>${x.title}</h1>`);
+
+        x.title = "maruti suzuki ";
+        document.write(`<h1>${x.title}</h1>`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Map() constructor</h1>
+
+    <p>A map is constructore (basic mapping of key and values))</p>
+    <p>maps are deffer than object in that thire key can be anything (prementive value as well as) not just string and symbiols</p>
+
+    <script>
+        var x = new Map();
+
+        //instance ste("key","value")
+        //instance get("key")
+
+        x.set("id",1234);
+        x.set("title","js")
+        x.set("duration","1month")
+        x.set("isEnable","true");
+
+        console.log(x);//structre of output will be associative set{key=value}
+
+        console.log('id=', x.get('id'))
+        console.log('title=', x.get('title'))
+        console.log('duration=', x.get('duration'))
+
+        document.write(`<h3> ${x.get('id')}</h3>`)
+        document.write(`<h3> ${x.get('title')}</h3>`)
+        document.write(`<h3> ${x.get('duration')}</h3>`)
+       
+    </script>
+
+
+</body>
+</html>

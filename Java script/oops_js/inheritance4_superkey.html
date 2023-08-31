@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>super key(without return)</h1>
+
+    <script>
+        class Company{
+            constructor(x,y){
+                this.empId=x
+                this.empDes=y
+            }
+
+            getEmpInfo(){
+                document.write(`<h1>employee id = ${this.empId} & employee designation = ${this.empDes}</h1>`);
+            }
+        }
+
+        class Emp extends Company{
+            constructor(na,em,id,de){
+                super(id,de);
+                this.name=na
+                this.email=em
+            }
+            getEmpInfo(){
+                super.getEmpInfo();
+                document.write(`<h1>employee name = ${this.name} & employee designation = ${this.email}`);
+            }
+
+        }
+
+        let x = new Emp("sachin","sachin@gmail.com",1,"developer")
+
+        x.getEmpInfo();
+    </script>
+</body>
+</html>

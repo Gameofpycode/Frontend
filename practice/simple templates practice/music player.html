@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background:url(); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+
+        }
+        .container{
+            width: 500px;
+            height: 100%;
+            background-color:transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ipod{
+            width: 60%;
+            min-height: 400px;
+            background:linear-gradient(rgb(46, 45, 45),rgb(19, 18, 18)) ;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .ipod .screan{
+            width: 100%;
+            height: 150px;
+            background-color: #fff;
+            background: url(https://thumbs.gfycat.com/ConcreteImpeccableIndochinesetiger-max-1mb.gif);
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+            border: 1px solid rgb(100, 95, 95);
+
+        }
+        .ipod .button1{
+            width: 180px;
+            height: 180px;
+            padding: 10px;
+            background:radial-gradient(rgb(56, 54, 54),rgb(22, 22, 22)) ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 20px;
+            left: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 4px rgb(0, 0, 0);
+
+        
+        }
+        .ipod .button2{
+            width: 180px;
+            height: 180px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            bottom: 20px;
+            left: 60px;
+            /* background-color: red; */
+            background: transparent;
+            border-radius: 50%;
+        }
+        .ipod .button1 .center{
+            width: 50%;
+            height: 50%;
+            background:radial-gradient(rgb(29, 28, 28),rgb(48, 47, 47)) ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 3px black,inset 0px 0px 4px rgb(54, 53, 53);
+        }
+        /* .button1 .fa-solid{
+            color: #fff;
+            
+        } */
+        button{
+            color: #fff;
+            background: none;
+            border: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ipod">
+            <div class="screan">
+                
+
+            </div>
+            <div class="button1">
+                <div class="left">
+                    <button type="submit"><i class="fa-solid fa-backward"></i></button>
+                </div>
+                <div class="right">
+                    <button type="submit"><i class="fa-solid fa-forward"></i></button>
+                </div>
+                <div class="center">
+
+                </div>
+                
+               
+            </div>
+            <div class="button2">
+                <div class="top">
+                    <button type="submit"><b>MENU</b></button>
+                </div>
+                <div class="buttom">
+                    <button type="submit"><i class="fa-solid fa-play"></i></button>
+                    <button type="submit"><i class="fa-solid fa-pause"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

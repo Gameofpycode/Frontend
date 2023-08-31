@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>parametrised Map constructor</h1>
+
+    <script>
+        let x = new Map([[2,3],[5,6],[7,8]]);
+
+        console.log('x=',x)
+
+        document.write(`<h2>x.get(5) = ${x.get(5)}</h2>`);
+        document.write(`<h2> size before clear = ${x.size}</h2>`);
+
+        x.clear();
+        console.log('after clear the x is =',x)
+        document.write(`<h2> size after clear = ${x.size}</h2>`);
+    </script>
+</body>
+</html>
