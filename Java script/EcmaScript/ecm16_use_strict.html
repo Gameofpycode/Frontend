@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>object .definedproperties</h3>
+
+    <script>
+        "use stricct";
+
+        var user = {};
+
+        console.log('before=', user);
+
+        Object.defineProperty(user,"name",{
+            value:"naveen",
+            writable:false //through type erroe in strict mode
+        });
+
+        try{
+            user.name = "Suma";//assignment
+        }catch(err){
+            console.log('after=',user);
+        }
+        //during assignment of new value to the property, the js compailer validate the writable property
+        //if writeable is true => re asign the value to the object
+        // if writable is false => through run time error(in strict mode)
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>finding largest of two number</h1>
+
+    <form id="myform">
+        <label for="num1">num1</label>
+        <input type="number" name="num1" id="num1">
+        <label for="num2">num1</label>
+        <input type="number" name="num2" id="num2">
+        <label for="op_type">op_type</label>
+        <select name="op_type" id="op_type">
+            <option value="condition">condition</option>
+            <option value="operator">oparator</option>
+            <option value="math">math</option>
+        </select>
+        <button type="submit" id="btn" class="btn" value="Find">find</button>
+    </form>
+    <h1 id="result"></h1>
+ 
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let res = document.getElementById("result");
+        let logic = document.getElementById("op_type")
+
+       
+
+        var isuser = true
+        console.log(isuser)
+        function condition(a,b){
+            if(a>b){
+                res.innerHTML=`<h1>${a} is largest number</h1>`
+            }else{
+                res.innerHTML=`<h1>${b} is largest number</h1>`
+            }
+        }
+
+        function oparator(a,b){
+            a>b?res.innerHTML=`<h1>${a} is largest number</h1>`:res.innerHTML=`<h1>${b} is largest number</h1>`
+            
+        }
+
+        function math(a,b){
+            Math.max(a,b)
+
+        }
+
+
+
+
+
+
+        function submitHandler(){
+            let a = Number(num1.value);
+            let b = Number(num2.value);
+
+            console.log(a);
+            console.log(b);
+
+
+            switch(logic.value){
+                case "condition":condition(a,b);break;
+                case "operator":operator(a,b);break;
+                // case "math":math(a,b);break;
+            }
+
+
+
+        }
+        document.getElementById("myform").addEventListener("submit", (e)=>{
+            e.preventDefault()
+            submitHandler()
+        })
+    </script>
+</body>
+</html>
