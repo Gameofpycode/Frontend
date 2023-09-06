@@ -18,20 +18,38 @@
             justify-content: center;
             align-items: center;
         }
+        tbody tr:nth-child(even){
+            background-color:rgb(255, 255, 255) ;
+        }
+        tbody tr:nth-child(odd){
+            background-color:rgba(160, 245, 218, 0.315) ;
+        }
         table{
             border: none;
             width: 100%;
+            text-align: center;
+            padding: 10px;
             
         }
         td, th{
-            border: 1px solid #000;
+            /* border: 1px solid #000; */
             padding: 10px;
             font-size: 1.2em;
+            padding: 10px;
+            /* background-color: aqua; */
         }
         th{
-            background: rgb(93, 8, 204);
+            background: rgb(172, 144, 207);
             color: #fff;
         }
+        tr img{
+            width: 260px;
+            height: 150px;
+            padding: 10px;
+            /* box-shadow: 0px 0px 5px black; */
+        }
+
+      
     </style>
    
 </head>
@@ -40,10 +58,14 @@
 
     <table cellspacing="0">
         <tr>
-            <th>Si no</th>
+            <th>Si.no</th>
+            <th>Thumbnail</th>
             <th>Product</th>
             <th>Price</th>
             <th>Stock</th>
+            <th>Rating</th>
+            <th>Brand</th>
+            <th>Categary</th>
         </tr>
         <tbody id="insertHear">
 
@@ -76,13 +98,17 @@
 
     function print(data){
         data.forEach(items => {
-            console.log(data.items);
            
             let element = document.createElement('tr');
             let td1=document.createElement('td');
             let td2=document.createElement('td');
             let td3=document.createElement('td');
             let td4=document.createElement('td');
+            let td5=document.createElement('td');
+            let td6=document.createElement('td');
+            let td7=document.createElement('td');
+            let img=document.createElement('td')
+            let td8=document.createElement("img");
            
            
             
@@ -91,13 +117,23 @@
             td2.textContent = items.title;
             td3.textContent = items.price;
             td4.textContent = items.stock;
+            td5.textContent = items.rating;
+            td6.textContent = items.brand;
+            td7.textContent = items.category;
+            td8.src=items.thumbnail;
+            
 
 
            //appending to main code
             element.appendChild(td1); 
+            element.appendChild(td8); 
             element.appendChild(td2);
             element.appendChild(td3);            
             element.appendChild(td4); 
+            element.appendChild(td5); 
+            element.appendChild(td6); 
+            element.appendChild(td7); 
+           
            
             myTable.appendChild(element); 
             // blk.appendChild(h1)         

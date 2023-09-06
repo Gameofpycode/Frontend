@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple interest</h1>
+    <form autocompleet=off onsubmit="submitHandler(event)">
+        <div>
+            <label for="principle">enter principle amount</label>
+            <input type="number" name="principle" id="principle">
+        </div>
+        <div>
+            <label for="time">enter the time duration in year</label>
+            <input type="number" name="time" id="time">
+        </div>
+        <div>
+            <label for="int">enter the time duration</label>
+            <input type="number" name="int" id="int">
+        </div>
+        <div>
+            <input type="submit" value="submit" id="submit">
+        </div>
+        <h1 id="result"></h1>
+
+
+    </form>
+
+    <script>
+            let a = document.getElementById("principle");
+            let b = document.getElementById("time");
+            let c = document.getElementById("int");
+            let res = document.getElementById("result")
+
+            function submitHandler(event){
+                event.preventDefault()
+                let p=Number(a.value);
+                let t=Number(b.value);
+                let r=Number(c.value);
+
+                res.innerHTML=`<h1>${(p*t*r)/100}</h1>`
+
+                res.innerHtml=`<h1></h1>`
+
+                
+            }
+    </script>
+</body>
+</html>

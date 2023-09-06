@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table td,th,tr{
+            border: 1px solid black;
+            /* padding: 5px; */
+            border-collapse: collapse;
+            
+        }
+        td,th{
+            padding: 10px;
+        }
+        table{
+            width: 100%;
+        }
+        
+    </style>
+    <!-- <style>
         section{
             width: 100%;
             overflow-x: hidden;
@@ -30,12 +45,24 @@
         article h2{
             color:rgb(206, 202, 146);
         }
-    </style>
+    </style> -->
 </head>
 <body>
-    <h1>fetch()</h1>
+    <!-- <h1>fetch()</h1> -->
 
-    <section id="block"></section>
+    <section id="block">
+        <table id="blk" cellspacing="0" cellpadding="0">
+            <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>user_name</th>
+                    <th>email</th>
+                    <th>address.street</th>
+                    <th>address.city</th>
+                    <th>address.zipcode</th>
+            </tr>
+        </table>
+    </section>
 
     <script>
         // js promis constructore has 4 states 
@@ -57,41 +84,49 @@
 
     function print(data){
         data.forEach(items => {
+            document.getElementById("blk").innerHTML+=`
+            <tr>
+                <td>${items.id}</td>
+                <td>${items.name}</td>
+                <td>${items.username}</td>
+                <td>${items.email}</td>
+                <td>${items.address.street}</td>
+                <td>${items.address.city}</td>
+                <td>${items.address.zipcode}</td>
+            </tr>
+            `
             //create na html tag
-            let article=document.createElement('article');
-            let h1 = document.createElement('h1')
-            let h3 = document.createElement('h3')
-            let h4 = document.createElement('h4');            
-            let p1 = document.createElement('p');
-            let p2 = document.createElement('p');
-            let p3 = document.createElement('p');
-            let p4 = document.createElement('p');
-            let h2 = document.createElement('h2');
+            // let article=document.createElement('article');
+            // let h1 = document.createElement('h1');
+            // let h3 = document.createElement('h3');
+            // let h4 = document.createElement('h4');            
+            // let p1 = document.createElement('p');
+            // let p2 = document.createElement('p');
+            // let p3 = document.createElement('p');
+            // let p4 = document.createElement('p');
+            // let h2 = document.createElement('h2');
             
              //add text content
-            h2.textContent = items.id;
-            h1.textContent = items.name;
-            h3.textContent = items.username;
-            h4.textContent = items.email;
-            p1.textContent = items.address.streat;
-            p2.textContent = items.address.suite;
-            p3.textContent = items.address.city;
-            p4.textContent = items.address.zipcode;
-
-
-
-
+            // h2.textContent = items.id;
+            // h1.textContent = items.name;
+            // h3.textContent = items.username;
+            // h4.textContent = items.email;
+            // p1.textContent = items.address.streat;
+            // p2.textContent = items.address.suite;
+            // p3.textContent = items.address.city;
+            // p4.textContent = items.address.zipcode;
+ 
            //appending to main code
-            article.appendChild(h2); 
-            article.appendChild(h1);
-            article.appendChild(h4);            
-            article.appendChild(p1); 
-            article.appendChild(p2); 
-            article.appendChild(p3); 
-            article.appendChild(p4); 
+            // article.appendChild(h2); 
+            // article.appendChild(h1);
+            // article.appendChild(h4);            
+            // article.appendChild(p1); 
+            // article.appendChild(p2); 
+            // article.appendChild(p3); 
+            // article.appendChild(p4); 
     
            
-            blk.appendChild(article); 
+            // blk.appendChild(article); 
             // blk.appendChild(h1)         
         });
 

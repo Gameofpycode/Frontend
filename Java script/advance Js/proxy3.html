@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>proxy of object as read only</h1>
+
+    <script>
+        let user = {
+            name : "john",
+            age:22,
+            isActive:true
+        }
+
+        let handler = {
+            set:function (obj,prop,value){
+                if(obj[prop]){
+                    console.log('readonly...')
+                }else{
+                    console.log("property not exit");
+                }
+            }
+        }
+
+        const pr = new Proxy(user,handler);
+
+            pr.name = "david";
+            pr.email = "david@gmail.com";
+    </script>
+</body>
+</html>

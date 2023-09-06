@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>proxy constructore</h1>
+
+    <p>new Proxy(target,handler)</p>
+    <p>target => object /function / url which we want to proxy </p>
+    <p>hnadler=> call back function</p>
+
+
+    <script>
+        let user = {
+            name:"mohan",
+            age:23,
+            isActive:true
+        };
+
+        const handler = {
+            get:function (obj,prop){
+                return obj[prop]? obj[prop]:"requested propert not exit"
+            }
+        }
+
+        const pr = new Proxy(user,handler);
+
+        console.log(`name =`,pr.name);
+        console.log(`email =`,pr.email);
+        document.write(`<h1>${pr.name}</h1>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local storage</h1>
+
+    <div>
+        <form auto complet="off" id="userForm">
+            <div>
+                <label for="name">enter name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div> 
+                <input type="submit" name="submit" id="sbt">
+            </div>
+
+
+        </form>
+
+    </div>
+    
+    <hr>
+    <h1 id="info"></h1>
+    <button onclick = "deletUser()">Delet user</button>
+
+    <script>
+        let userForm = document.getElementById("userForm");
+        let fnmae = document.getElementById('name');
+        let info = document.getElementById("info");
+
+        //delet handler()
+
+        function deletUser(){
+            if(confirm(`are you sure to delet user`)){
+                if(localStorage.getItem("user")){
+                    localStorage.removeItem('user');
+                    alert('user ino cleare succefully');
+                    window.location.reload();
+                }else{
+                    alert("no user info exist");
+                }
+            }else{
+                alert("delete terminated...");
+            }
+        }
+
+        //set handler
+        userForm.addEventListener('submit',async(event)=>{
+            localStorage.setItem("user",fnmae.value);
+            alert("user name added");
+        });
+
+        //get handler
+        (function(){
+            if(localStorage.getItem("user")){
+                info.innerText = `username is ${localStorage.getItem("user")}`;
+            }else{
+                info.innerText = `no user name exists`
+            }
+        })
+    </script>
+</body>
+</html>

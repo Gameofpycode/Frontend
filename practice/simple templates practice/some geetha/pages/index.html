@@ -55,11 +55,15 @@
                     </div>
                     <div class="form-group" id="progress_container">
                     <span id="p_value"></span>
-                    <!-- <progress></progress> -->
+                    <progress id="progress" value="0" max="100"></progress>
                     </div>
                     <div class="form-group mt-3">
                         <label for="" class="form-label">some audio description</label>
                         <textarea name="desc" id="desc" cols="30" rows="5 " class="form-control"></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="" class="form-label">Lyrics</label>
+                        <textarea name="lyrics" id="lyrics" cols="30" rows="5 " class="form-control"></textarea>
                     </div>
                     <div class="form-group mt-3">
                         <button class="btn w-100 p-3 text-black bg-info-subtle fs-4" id="btn">Upload</button>
@@ -94,15 +98,18 @@
         try {
         const app = firebase.initializeApp(firebaseConfig);
         // Now you can use Firebase services, e.g., Firebase Storage
-         var audio = document.getElementById("audio");
+        var audio = document.getElementById("audio");
         var upload = document.getElementById("btn");
 
         var p_conatiner = document.getElementById("progress_container");
-        var progress =document.createElement("progress");
-        var p_value = document.getElementById('p_value')
+        var progress =document.getElementById("progress");
+        var p_value = document.getElementById('p_value');
+
         progress.value=0 
         p_conatiner.appendChild(progress)
         p_conatiner.style.visibility="hidden";
+
+
 
         upload.addEventListener("click",()=>{
             const selected_audio=audio.files[0]
@@ -110,8 +117,10 @@
                 if(selected_audio){
                     const storage = app.storage().ref();
                     const audio_folder = storage.child('audios/'+selected_audio.name).put(selected_audio)
+
             audio_folder.on("state_changed",(snapshot)=>{
                 const progress_value=parseInt((snapshot.bytesTransferred/snapshot.totalBytes)*100)
+
                 p_value.innerHTML = `${progress_value}%`
                 p_conatiner.style.visibility="visible";              
                 progress.value=progress_value             
@@ -123,12 +132,31 @@
                 audio_folder.snapshot.ref.getDownloadURL().then((url)=>{
                     p_conatiner.style.visibility="hidden";
                     console.log(url);
+                    const database = firebase.database()
+                    let title = document.getElementById("title").value;
+                    let albumImage = document.getElementById("image").value;
+                    let lyrics = document.getElementById("lyrics").value;
+                    let audioDiscription = document.getElementById("desc").value;
+                    
+
+                     let song_detailes={s_title:title,s_albumImage:albumImage,s_lyrics:lyrics,s_description:audioDiscription,audio_url:url}
+
+                    const audio_detailes = database.ref('audios/');
+
+                    audio_detailes.push(song_detailes).then(() => {
+                        alert("song detailes has been uploaded")
+                    }).catch((err)=> {
+                            console.log(err.message);
+                        });
+
+
+
+
                    
 
-                })
+                });
 
-            }
-            )
+            });
                 }else{
                     alert("file is not selected")
                 }
@@ -139,14 +167,9 @@
       } catch (error) {
         console.error('Error initializing Firebase:', error);
       }
-
-       
-
        
       </script>
-    
      
-      
       <!-- <script src="../script/upload.js"></script> -->
 </body>
 </html>

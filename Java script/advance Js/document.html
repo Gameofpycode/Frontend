@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .container{
+            width: 80vw;
+            margin: auto;
+        }
+
+        .row{
+            display: flex;
+            padding: 10px;
+        }
+        table,tr,td,th{
+            border: 1px solid #222;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        td,th{
+            padding: 10px;
+
+        }
+        tr:nth-child(even){
+            background-color: rgb(82, 134, 245);
+            color: #fff;
+        }
+        button{
+            cursor: pointer;
+            padding: 10px 12px;
+            font-size:1em;
+            border: none;
+            background-color: red;
+            color: #fff;
+            border-radius: 5px;
+            
+        }
+
+        dialog{
+            width: 300px;
+            height: 400px;
+            background:linear-gradient(rgb(0, 0, 0) 40%,rgb(223, 131, 11) );
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            backdrop-filter: blur(20px);
+            border: 1px solid blue;
+            /* transition: 2s; */
+            animation: dialog 1s ease-in-out;
+            overflow: hidden;
+        
+        }
+       
+        form{
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            
+        }
+        .btn-danger{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            right:0;
+            background: linear-gradient(rgb(255, 255, 255),rgb(59, 240, 231));
+            border-radius: 0px 0px 0px 20px;
+            color: #000;
+            font-weight: bold;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            margin-top: 5px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #fff;
+            font-size: 1.1em;
+            color: #fff;
+            
+        }
+        label{
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .d_posi{
+            position: absolute;
+            width: 100%;
+            min-height: 100vh;
+            top: 0;
+            right:0;
+            background-color: rgba(0, 0, 0, 0.562);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            overflow: hidden;
+        
+        }
+        @keyframes dialog{
+            from{
+                transform: translateY(-300px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+       <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <button id = open>Add user</button>
+                    </th>
+                   
+                </tr>
+                <tr style="background-color: black;text-align: center;color:gold">
+                    <td><h3>ID</h3></td>
+                    <td><h3>Name</h3></td>
+                    <td><h3>Email</h3></td>
+                    <td><h3>Age</h3></td>
+                    <td><h3>Action</h3></td>
+                  
+                </tr>
+            </thead>
+            <tbody id = userifno></tbody>
+        </table>
+       </div>
+       <!-- <div class="d_posi"  > -->
+        <dialog id="userDialog">
+            <button id="close" class="btn-danger">X</button>
+            <div class="form">
+ 
+             <form autocomplete="off" onsubmit="submitHandler(event)">   
+                 <div>
+                     <label for="name">Name:</label><br>
+                     <input type="text" name="name" id="name" required>
+                 </div>
+                 <div>
+                     <label for="email">Email:</label><br>
+                     <input type="email" name="email" id="email" required>
+                 </div>
+                 <div>
+                     <label for="age">Age:</label><br>
+                     <input type="number" name="age" id="age" required>
+                 </div>
+                 <div>
+                     <button type ="submit" class="btn-success">add new user</button>
+                 </div>
+ 
+             </form>
+            </div>
+        </dialog>
+       <!-- </div> -->
+
+       
+
+    </div>
+
+    <script>
+    
+        let op = document.getElementById("open");
+        let cls = document.getElementById("close");
+        let dig = document.getElementById("userDialog");
+        // dig.close()
+
+        op.addEventListener("click",()=>{
+            // dig.show();
+            dig.style.visibility = "visible"
+        });
+
+        cls.addEventListener("click",()=>{
+            // dig.close();
+            dig.style.visibility = "hidden"
+        });
+       
+
+        let fname = document.getElementById("name");
+        let femail = document.getElementById("email");
+        let fage = document.getElementById("age");
+
+        const genRnad=()=>Math.floor(Math.random()*10000);
+
+        const submitHandler = async (e)=>{
+            e.preventDefault();
+            let newUser = {
+                id :genRnad(),
+                name:fname.value,
+                email:femail.value,
+                age:fage.value
+            }
+            console.log('newUser=',newUser)
+
+        }
+    </script>
+</body>
+</html>

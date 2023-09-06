@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>finding the root and cube of given number</h1>
+    <p>math.sqrt(n) and Math.cbrt(n)</p>
+    <p>all positive number</p>
+    <p>negative number or strings give NaN</p>
+
+    <form autocomplete="off" onsubmit="submitHandler()">
+        <div>
+            <label for="num">enter input number</label>
+            <input type="number" name="num" id="num" required>
+
+        </div>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+        <h1 id="result"></h1>
+
+    </form>
+
+    <script>
+        var x = document.getElementById("num")
+        var result1=document.getElementById("result")
+
+       
+
+        function submitHandler(e){
+            event.preventDefault();
+            let num1=Number(x.value);
+            result1.innerHTML=`<h1> squareroot is :${Math.sqrt(num1)},<br><hr>and cube root is :${Math.cbrt(num1)} </h1>`
+            console.log(num1);
+            
+        }
+    </script>
+</body>
+</html>

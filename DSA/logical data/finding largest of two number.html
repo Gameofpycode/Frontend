@@ -17,7 +17,7 @@
         <label for="op_type">op_type</label>
         <select name="op_type" id="op_type">
             <option value="condition">condition</option>
-            <option value="operator">oparator</option>
+            <option value="operator">operator</option>
             <option value="math">math</option>
         </select>
         <button type="submit" id="btn" class="btn" value="Find">find</button>
@@ -52,11 +52,6 @@
 
         }
 
-
-
-
-
-
         function submitHandler(){
             let a = Number(num1.value);
             let b = Number(num2.value);
@@ -68,16 +63,15 @@
             switch(logic.value){
                 case "condition":condition(a,b);break;
                 case "operator":operator(a,b);break;
-                // case "math":math(a,b);break;
+                case "math":math(a,b);break;
+                default:"enter the correct operator type"
             }
-
-
 
         }
         document.getElementById("myform").addEventListener("submit", (e)=>{
             e.preventDefault()
             submitHandler()
-        })
+        });
     </script>
 </body>
 </html>
