@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>celsius to faranet coverter</h1>
+    <label for="choose">choose option</label>
+    <select name="shapes" id="num" onchange="selHandler()">
+        <option value="celsius to faranet">Celsius to faranet</option>
+        <option value="faranet to celisius">Faranet to celisius</option>
+    </select>
+
+    <h1 id="result" style="background-color:black;color:gold"></h1>
+
+    <script>
+        let shapes = document.getElementById("num");
+        let res = document.getElementById("result");
+
+        function selHandler(){
+            console.log(num.value);
+
+            switch(num.value){
+                
+                case "celsius to faranet":
+                var c = prompt("enter the value in celsius:");    
+                res.innerHTML=`<h1>in faranet : ${(Number(c)*1.8 + 32).toFixed(2)}</h1>`;
+                break;
+                case "faranet to celisius":
+                var f = prompt("enter the temp in faranet");    
+                res.innerHTML=`<h1>in celsius : ${((Number(f)-32)/1.8).toFixed(2)}</h1>`;
+                break;
+                
+
+
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form autocomplete="off" onsubmit="submitHandler(event)" > 
+        <div class="input">
+            <label for="num">enter values sepearated by comma ","</label>
+            <textarea name="num" id="num" cols="35" rows="5" required></textarea>
+        </div>
+       <div>
+        <input type="submit" value="submit">
+       </div>
+       <div id="result1"></div>
+    </form>
+
+    <script>
+        var x = document.getElementById("num")
+        var result1=document.getElementById("result1")   
+
+        function submitHandler(event){
+            event.preventDefault();
+            let name1=(x.value);
+            let y =[]
+            let arra2=[]
+            
+           let arr = name1.split(",");
+           console.log(arr)
+
+            //coverting array of stings into array of number
+
+        //    arra2 = arr.map((items)=>{
+        //        return Number(items)
+        //    });
+
+            //seccond method
+           for (let i of arr){
+               arra2.push(Number(i))   
+           }
+           console.log(arra2)
+            
+
+
+           function largest(num1){
+               let large=0
+               for (var i of num1){
+                   if(i<large){
+                       large=i
+                       
+                   }
+               }
+               return i
+           }
+           function smallest(num1){
+               let small=0
+               for (var k of num1){
+                   if(k>small){
+                       small=k
+                       
+                   }
+               }
+               return k
+           }
+
+
+           let largest1=largest(arra2)
+           let smallest1=smallest(arra2)
+        //    result1.innerHTML=`<h1> largest is ${largest1}</h1>`
+           result1.innerHTML+=`<h1> smallest is${smallest1}</h1>`
+        }
+
+       
+       
+    </script>
+</body>
+</html>

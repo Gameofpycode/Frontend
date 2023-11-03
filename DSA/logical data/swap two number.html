@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>swap two number</h1>
+    <input type="number" id="num">
+    <button onclick="swap()">with temp</button>
+    <button onclick="swapwithouttemp()">without temp</button>
+    <button onclick="swapwithargue()">with argue</button>
+    <button onclick="xor()">xor</button>
+    <script>
+        function swap(){
+            let x = document.getElementById("num");
+            // let x = Number(prompt("enter the x value:"));
+            let y = Number(prompt("enter the y value:"));
+
+            document.write(`<h2>using temp varibale</h2>`);
+
+
+            document.write(`<h1>before x = ${x} and y = ${y}</h1>`);
+
+            let temp;
+            temp = x;
+            x=y;
+            y= temp;
+            document.write(`<h1>after x = ${x} and y = ${y}</h1>`);
+
+        }
+
+        function swapwithouttemp(){
+            let a = Number(prompt("enter the x value:"));
+            let b = Number(prompt("enter the y value:"));
+
+            document.write(`<h2>using temp varibale</h2>`);
+
+            document.write(`<h1>before x = ${a} and y = ${b}</h1>`);
+
+            
+            a=a+b;
+            b=a-b;
+            a=a-b ;
+            document.write(`<h1>after x = ${a} and y = ${b}</h1>`);
+
+        }
+        function swapwithargue(){
+            let a = Number(prompt("enter the x value:"));
+            let b = Number(prompt("enter the y value:"));
+
+            document.write(`<h2>using width argument varibale</h2>`);
+
+            document.write(`<h1>before x = ${a} and y = ${b}</h1>`);
+
+            [a,b]=[b,a]
+            document.write(`<h1>after x = ${a} and y = ${b}</h1>`);
+
+        }
+        function xor(){
+            let a = Number(prompt("enter the x value:"));
+            let b = Number(prompt("enter the y value:"));
+
+            document.write(`<h2>using with xor operator</h2>`);
+
+            document.write(`<h1>before x = ${a} and y = ${b}</h1>`);
+            a=a^b;
+            b=a^b;
+            a=a^b;
+            
+            document.write(`<h1>after x = ${a} and y = ${b}</h1>`);
+
+        }
+
+        // swap();
+        // swapwithouttemp();
+    </script>
+</body>
+</html>

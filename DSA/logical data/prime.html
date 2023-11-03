@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>celsius to faranet coverter</h1>
+    <label for="choose">choose option</label>
+    <form autocomplete="off" onsubmit="submitHandler()">
+        <input type="text" id="num1" >
+        <select name="num" id="num">
+            <option value="null">choose method</option>
+            <option value="rec">Recursion</option>
+            <option value="con">condition</option>
+        </select>
+    
+        <input type="button" name="btn" id="btn">
+    
+    </form>
+   
+    <h1 id="result" style="background-color:black;color:gold"></h1>
+
+    <script>
+        let num1 = document.getElementById("num1")
+        let num = document.getElementById("num");
+        let res = document.getElementById("result");
+
+        function selHandler(){
+            console.log(num.value);
+
+            switch(num.value){
+                
+                
+                case "rec":
+                let res1=rec(num1);
+
+                res.innerHTML= res1?`<h1>${res1} is prime </h1>`: `</h1>${res1} is not a prime</h1>`;
+                break;
+                case "con": 
+                let res2=loop (num1);
+
+                res.innerHTML= res1?`<h1>${res1} is prime </h1>`: `</h1>${res1} is not a prime</h1>`;
+    
+                break;
+
+
+
+            }
+
+        }
+
+        function loop(num1){
+            if(num<1){
+                return flase;
+            }
+            for (let i = 2;i<num;i++){
+                if(num%i==0){
+                    return false;
+                }
+                return true;
+            }
+
+        }
+
+        function rec(num1,i=2){
+            if(n<=2) return (n,i=2)
+            if(n<=2) return (n==2)?true:flase;
+            if(n%=i ===0) return false;
+            if(i*i>n) return true;
+            return rec(num1,i+1);
+            
+
+        }
+
+    </script>
+</body>
+</html>

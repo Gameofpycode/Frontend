@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>celsius to faranet coverter</h1>
+    <label for="choose">choose option</label>
+    <select name="num" id="num" onchange="selHandler()">
+        <option value="recursion">Recursion</option>
+        <option value="forloop">For Loop</option>
+        <option value="while">Whileloop</option>
+        <option value="ternory">Ternory</option>
+    </select>
+
+    <h1 id="result" style="background-color:black;color:gold"></h1>
+
+    <script>
+        let num = document.getElementById("num");
+        let res = document.getElementById("result");
+
+        function selHandler(){
+            console.log(num.value);
+            let temp = 1;
+            console.log(num.value)
+            let num1=prompt("enter the number")
+
+            switch(num.value){
+                
+                case "recursion":
+                // let num1 = prompt("enter the number:")
+                // for(let i=2;i<num1;i++){
+                //         temp*=(i)    
+                // }
+                let res1=factrec(num1);
+
+                res.innerHTML=`<h1>factorial of given number is : ${(Number(res1))}</h1>`;
+                break;
+                case "forloop":
+                 
+                 let res2=factfor(num1);
+
+                res.innerHTML=`<h1>factorial of given number is : ${(Number(res2))}</h1>`;
+    
+                break;
+
+                case "while":
+                 
+                 let res3=factwhile(num1);
+
+                res.innerHTML=`<h1>factorial of given number is : ${(Number(res3))}</h1>`;
+    
+                break;
+
+                case "ternory":
+                 
+                 let res4=factwhile(num1);
+
+                res.innerHTML=`<h1>factorial of given number is : ${(Number(res4))}</h1>`;
+    
+                break;
+
+            }
+
+        }
+
+        //recursive
+        function factrec(num1){
+            if(num1===0){
+                return 0;
+            }else{
+                return num * factrec(num1-1)
+            }
+        }
+
+        //function for faco for loop
+        function factfor(num1){
+            if(num === 0) return1;
+            let fa = 1;
+            let i = 2;
+            while (i<=num){
+                fa = fa * i;
+                i++;            
+            }
+            return fa
+
+        }
+
+        function ternory(num){
+            let fac = (num===1 || num ===0)/1;fact
+        }
+    </script>
+</body>
+</html>

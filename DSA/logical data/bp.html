@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(15, 4, 51, 0.986);
+        }
+        form{
+            height:80%; 
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label{
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: rgb(162, 228, 240);
+        }
+        input{
+            width: 100%;
+            font-size: 2em;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: none;
+            outline: none;
+            border-bottom: 2px solid rgb(162, 228, 240);
+            color: #fff;
+            
+        }
+        .btn{
+            background-color: rgb(223, 176, 107);
+            border: none;
+            padding: 10px 20px;
+            position: relative;
+            left: -135px;
+            top: 0;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <form autocomplete="off" onsubmit="submitHandler()">
+        <div>
+            <label for="num">enter input number</label><br>
+            <input type="number" name="num" id="num" required>
+
+        </div>
+        <div>
+            <input type="submit" value="submit" class ="btn">
+        </div>
+        <hr>
+        <div style="min-width:400px;height: 200px;background-color: #fff;">
+            
+            <h1 id="result"></h1>
+   
+        </div>
+       
+    </form>
+
+</body>
+</html>

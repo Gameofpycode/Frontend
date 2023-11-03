@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{color:green}
+        .error{color:red}
+    </style>
+</head>
+<body>
+    <h1>entered input is string or not</h1>
+
+    <p>str.match(/[a-zA-Z]) or reg exp x = /^[a-zA-z]$/</p>
+    
+    <form autocomplete="off" onkeyup="keyHandler()">
+    <label for="input">enter input</label>
+    <input type="text" id="input" name="input" required>
+    </form>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        var x = document.getElementById("input");
+        var reg1 = /^[a-zA-Z]+$/;
+        var reg2 = /^[a-zA-Z0-9#@$]+$/;
+        var reg3 =[/a-zA-Z/];
+        var res=document.getElementById("result")
+
+        function keyHandler(){
+            
+            // console.log('match=',reg1.test(x.value));
+            console.log('match=',reg2.test(x.value));
+            res.innerHTML=`<h1>${reg2.test(x.value)} </h1>`
+        }
+
+    </script>
+</body>
+</html>
